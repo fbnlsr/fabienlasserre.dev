@@ -10,24 +10,6 @@ layout: "base.njk"
             locale %} - {{ content | readingTime }}.
     </p>
 
-    {%- if hasCover -%}
-        <div class="cover-image">
-            <div class="cover-container"
-                 style="background-image: url('/img/blog/{{ date | blogdate }}/cover-1000w.webp');"></div>
-            {%- if cover.author -%}
-                <p class="is-cover-author noprint">
-                    {%- if cover.link -%}
-                    Photo {% if locale == 'fr' %}par{% else %}by{% endif %} <a href="{{ cover.link }}">
-                        {%- endif -%}
-                        {{ cover.author -}}
-                        {%- if cover.link -%}
-                    </a>
-                    {%- endif -%}
-                </p>
-            {%- endif -%}
-        </div>
-    {%- endif -%}
-
     {%- if locale == 'fr' -%}
         {%- set otherLocale = 'en' -%}
     {%- else -%}

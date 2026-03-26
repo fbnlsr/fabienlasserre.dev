@@ -37,10 +37,10 @@
     <link href="/{{ locale }}/blog/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.title }}">
 
     <!-- Fonts -->
-    <link rel="preload" href="/fonts/montserrat.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/nunitosans.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/nunitosansitalic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/nunitosansbold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="256x256" href="/img/favicon-256x256.png">
@@ -75,11 +75,21 @@
     <link rel="stylesheet" media="all" href="{{ "/css/main.min.css" | url }}">
 </head>
 <body>
-<div class="mode-switch noprint">
-    <a id='darkSwitch' class="is-mode-switcher" href="#"><img src="/img/moon.svg" height="25" width="25"
-                                                              alt="Dark mode" /></a>
-    <a id='lightSwitch' class="is-mode-switcher" href="#"><img src="/img/sun.svg" height="25" width="25"
-                                                               alt="Light mode"></a>
+
+<div class="site-header">
+    <div class="content">
+        <ul class="site-nav">
+            <li>
+                <a href="/{locale}">Accueil</a>
+            </li>
+            <li>
+                <a href="/{locale}/blog/">Blog</a>
+            </li>
+            <li>
+                <a href="/{locale}/contact">Contact</a>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <div class="lang-choser noprint is-hidden-mobile">
@@ -157,25 +167,6 @@
         </a>
     </div>
 </footer>
-
-<!-- JavaScript -->
-<script>
-  const mode = localStorage.getItem('mode');
-
-  if (mode && mode === 'dark') {
-    document
-      .body
-      .classList
-      .add('dark-mode');
-  }
-
-  if (!mode || mode === 'light') {
-    document
-      .body
-      .classList
-      .remove('dark-mode');
-  }
-</script>
 
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js'

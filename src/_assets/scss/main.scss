@@ -14,73 +14,24 @@
 @use 'fourofour';
 @use 'footer';
 
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Montserrat'), url(/fonts/montserrat.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/montserrat.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
+h1,
+.title,
+.blog-post-title {
+  font-family: "Instrument Sans", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/montserrat.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Nunito Sans';
   font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: local('Nunito Sans'), url(/fonts/nunitosans.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  color: variables.$yellow;
+  letter-spacing: 2%;
 }
 
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: italic;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url(/fonts/nunitosansitalic.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+h1 {
+  font-size: 48px;
 }
 
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url(/fonts/nunitosansbold.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+.title,
+.blog-post-title {
+  font-size: 32px;
 }
 
 * {
@@ -105,14 +56,9 @@ html {
 body {
   background-color: variables.$background;
   color: variables.$text;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Mulish", sans-serif;
   display: flex;
   flex-direction: column;
-
-  &.dark-mode {
-    background-color: variables.$bgdark;
-    color: variables.$textdark;
-  }
 }
 
 h1 {
@@ -123,7 +69,7 @@ h1 {
 }
 
 hr {
-  background-color: variables.$blue;
+  background-color: variables.$gray;
 }
 
 img {
@@ -136,26 +82,19 @@ img {
   text-align: center;
   margin-bottom: 3rem;
   border-radius: 4px;
-  color: variables.$blue;
+  background-color: variables.$yellow;
+  color: variables.$black;
   outline: 0;
 
   a {
     text-align: center;
     border-radius: 4px;
-    border: 1px solid variables.$blue;
     padding: 0.5rem 0.75rem;
-    color: variables.$blue;
-    transition: color 0.2s ease-out, background-color 0.2s ease-out;
 
     &:hover,
     &:active,
     &:visited {
       color: inherit;
-    }
-
-    &:hover {
-      background-color: variables.$blue;
-      color: variables.$background;
     }
   }
 }
@@ -166,39 +105,21 @@ button:active {
   outline: 0;
 }
 
-.column.is-half,
-.column.is-half-tablet {
-  width: initial;
-  flex: 1;
-}
-
 .site {
   flex-grow: 1;
 }
 
-.white-container {
-  background-color: white;
-  border: 1px solid variables.$blue;
-  padding: 1rem;
-  border-radius: 5px;
-}
+.site-header {
+  height: 50px;
+  background-color: variables.$background2;
 
-.mode-switch {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  z-index: 8999;
-
-  img {
-    width: 25px;
-  }
-
-  #darkSwitch {
-    display: block;
-  }
-
-  #lightSwitch {
-    display: none;
+  .content {
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
   }
 }
 
@@ -207,23 +128,6 @@ button:active {
   top: 25px;
   right: 25px;
   z-index: 8999;
-}
-
-body.dark-mode {
-  .mode-switch {
-    #darkSwitch {
-      display: none;
-    }
-
-    #lightSwitch {
-      display: block;
-    }
-  }
-
-  .white-container {
-    background-color: color.adjust(variables.$bgdark, $lightness: 3%, $space: hsl);
-    border: 1px solid color.adjust(variables.$blue, $lightness: 20%, $space: hsl);
-  }
 }
 
 .is-hidden-mobile {
