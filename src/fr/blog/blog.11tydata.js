@@ -22,21 +22,6 @@ export default function() {
           return true;
         }
       },
-      hasCover: function(data) {
-        if (data.page.date) {
-          const year = data.page.date.getFullYear().toString();
-          const month = ('0' + (data.page.date.getMonth() + 1))
-            .slice(-2)
-            .toString();
-          const day = ('0' + data.page.date.getDate()).slice(-2).toString();
-
-          const path = `./src/img/blog/${year}-${month}-${day}/cover.webp`;
-
-          return fs.existsSync(path);
-        } else {
-          return false;
-        }
-      }
     },
     layout: 'blogpost.njk',
     tags: 'posts_fr',

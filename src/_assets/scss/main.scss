@@ -2,36 +2,16 @@
 @use 'dracula_prism';
 @use 'dracula';
 @use '../../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
-@use 'variables';
 @use 'nav';
-@use 'home';
-@use 'contact';
-@use 'about';
-@use 'projects';
-@use 'project';
-@use 'blog';
-@use 'page';
-@use 'fourofour';
-@use 'footer';
 
-h1,
-.title,
-.blog-post-title {
-  font-family: "Instrument Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  color: variables.$yellow;
-  letter-spacing: 2%;
-}
-
-h1 {
-  font-size: 48px;
-}
-
-.title,
-.blog-post-title {
-  font-size: 32px;
+:root {
+  --bg: #171722;
+  --bg-top: #1b1b28;
+  --bg-bottom: #151520;
+  --bg-nav: rgba(26, 26, 34, .5);
+  --text: #f3f3f5;
+  --accent: #f0b323;
+  --nav-border: rgba(255, 255, 255, .07);
 }
 
 * {
@@ -50,100 +30,54 @@ body {
 }
 
 html {
+  background: var(--bg);
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: variables.$background;
-  color: variables.$text;
-  font-family: "Mulish", sans-serif;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background-color: var(--bg);
+  position: relative;
+
+  background-image:
+          radial-gradient(
+                  1000px 420px at 50% 0%,
+                  rgba(43, 43, 54, 0.40),
+                  rgba(43, 43, 54, 0.04) 35%,
+                  transparent 70%
+          ),
+          radial-gradient(
+                  1000px 300px at 50% 10%,
+                  rgba(255, 255, 255, 0.04),
+                  transparent 70%
+          ),
+          linear-gradient(
+                  180deg,
+                  var(--bg-top) 0%,
+                  var(--bg) 38%,
+                  var(--bg-bottom) 100%
+          );
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-h1 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
 
-hr {
-  background-color: variables.$gray;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-.btn {
-  display: inline-block;
-  text-align: center;
-  margin-bottom: 3rem;
-  border-radius: 4px;
-  background-color: variables.$yellow;
-  color: variables.$black;
-  outline: 0;
-
-  a {
-    text-align: center;
-    border-radius: 4px;
-    padding: 0.5rem 0.75rem;
-
-    &:hover,
-    &:active,
-    &:visited {
-      color: inherit;
-    }
-  }
-}
-
-button,
-button:focus,
-button:active {
-  outline: 0;
+  background-image: url("/img/noise.png");
+  background-repeat: repeat;
+  opacity: 0.05;
+  //mix-blend-mode: soft-light;
 }
 
 .site {
-  flex-grow: 1;
-}
-
-.site-header {
-  height: 50px;
-  background-color: variables.$background2;
-
-  .content {
-    max-width: 960px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-}
-
-.lang-choser {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  z-index: 8999;
-}
-
-.is-hidden-mobile {
-  @media screen and (max-width: 768px) {
-    display: none !important;
-  }
-}
-
-@media screen {
-  .noscreen {
-    display: none !important;
-  }
-}
-
-@media print {
-  .noprint {
-    display: none !important;
-  }
+  position: relative;
+  z-index: 1;
 }
