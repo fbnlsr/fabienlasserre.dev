@@ -1,5 +1,5 @@
 ---
-layout: "about.njk"
+layout: "layouts/about.njk"
 translationKey: "about"
 metaDesc: "I mainly work with modern tools and frameworks, such as Symfony, Vue.js, WordPress, Eleventy... I'm a web developper with over 15 years of experience, and I've been a freelancer since 2012. I work with Open Source CMS, HTML, CSS, TypeScript, PHP and MySQL. My clients are web agencies and companies of all sizes."
 title: "Know-how"

@@ -1,0 +1,28 @@
+<nav class="nav-container noprint" aria-label="main navigation">
+    <div class="content">
+        <div>
+            <a href="{{ "/" | locale_url }}"
+               class="{% if page.url == '/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].home }}</a>
+            <a href="{{ "/blog/" | locale_url }}"
+               class="{% if page.url == '/blog/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].blog }}</a>
+            <a href="{{ "/contact/" | locale_url }}"
+               class="{% if page.url == '/contact/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].contact }}</a>
+        </div>
+
+        <div>
+            {% for link in page.url | locale_links %}
+                <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
+                    {{ link.label }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="navbar-burger" data-target="mobileNav">
+        <a href="#" aria-label="Burger menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+</nav>

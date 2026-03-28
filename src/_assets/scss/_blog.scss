@@ -1,0 +1,27 @@
+.blogpost_item {
+  color: var(--accent);
+  margin-bottom: 10px;
+
+  a {
+    color: var(--text);
+  }
+
+  span {
+    color: var(--text);
+    margin-left: .5rem;
+    margin-right: .5rem;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &.date {
+      color: var(--gray);
+      font-family: "IBM Plex Mono", monospace;
+    }
+  }
+}

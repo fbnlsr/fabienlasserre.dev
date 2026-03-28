@@ -1,0 +1,49 @@
+---
+layout: "layouts/base.njk"
+layout_size: "large"
+---
+<div class="home">
+    <h1>Fabien Lasserre</h1>
+
+    <div class="hero section">
+        <img src="/img/me-135x135.webp" alt="Fabien Lasserre" />
+        <div class="details">
+            <div>
+                <p class="title">{{ jobTitle | safe }}</p>
+                <p class="stack">{{ stack }}</p>
+            </div>
+            <div>
+                <a class="btn" href="{{ "/contact/" | locale_url }}">{{ contactMe }}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="about section">
+        <h2>{{ about }}</h2>
+        <p>{{ about1 | safe }}</p>
+        <p>{{ about2 | safe }}</p>
+        <p>{{ about3 | markdownify | safe }}</p>
+    </div>
+
+    <div class="posts section">
+        <h2>{{ lastPosts }}</h2>
+        {% set posts = collections["posts_" ~ locale] | reverse %}
+        {% for post in posts.slice(0,3) %}
+            {% set date = post.date %}
+            {% set title = post.data.title %}
+            {% set link = post.url %}
+            {% include "components/blogpost_item.njk" %}
+        {% endfor %}
+    </div>
+
+    <div class="projects section">
+        <h2>{{ projects }}</h2>
+        <div class="content">
+            {% set projects = { en: projects_en, fr: projects_fr }[locale] or [] %}
+            {% for project in projects %}
+                {% set item = project %}
+                {% include "components/project_card.njk" %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

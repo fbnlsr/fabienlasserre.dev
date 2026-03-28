@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Exeve",
+    "description": "Application de gestion d’inventaires et de vente aux enchères pour les commissaires-priseurs.",
+    "stack": [
+      "Symfony",
+      "Vue.js"
+    ]
+  }
+]

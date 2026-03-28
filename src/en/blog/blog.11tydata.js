@@ -21,9 +21,9 @@ export default function() {
         } else {
           return true;
         }
-      },
+      }
     },
-    layout: 'blogpost.njk',
+    layout: 'layouts/blogpost.njk',
     tags: 'posts_en',
     category: 'blog',
     permalink: '/en/blog/{{ title | slugify }}/'

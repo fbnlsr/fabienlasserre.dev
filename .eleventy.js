@@ -4,6 +4,7 @@ import emojifyPlugin from 'eleventy-plugin-emojify';
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import htmlmin from 'html-minifier-next';
 import markdownIt from 'markdown-it';
+import { I18nPlugin } from '@11ty/eleventy';
 
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/img/');
@@ -19,6 +20,11 @@ export default function(eleventyConfig) {
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(emojifyPlugin);
   eleventyConfig.addPlugin(pluginRss);
+
+  eleventyConfig.addPlugin(I18nPlugin, {
+    defaultLanguage: "fr",
+    errorMode: "allow-fallback"
+  });
 
   // Markdown filter for applying to the "description" inside projects front matter
   const markdownItOptions = {
@@ -98,7 +104,6 @@ export default function(eleventyConfig) {
     dir: {
       input: 'src',
       output: 'dist',
-      layouts: '_layouts'
     }
   };
 };

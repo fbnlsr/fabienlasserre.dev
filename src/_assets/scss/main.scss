@@ -1,17 +1,21 @@
 @use "sass:color";
 @use 'dracula_prism';
 @use 'dracula';
-@use '../../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
 @use 'nav';
+@use 'home';
+@use 'blog';
 
 :root {
-  --bg: #171722;
+  --bg: #21202B;
   --bg-top: #1b1b28;
   --bg-bottom: #151520;
   --bg-nav: rgba(26, 26, 34, .5);
   --text: #f3f3f5;
   --accent: #f0b323;
+  --accent-light: #ffc12f;
   --nav-border: rgba(255, 255, 255, .07);
+  --gray: #777;
+  --lightgray: #999;
 }
 
 * {
@@ -40,44 +44,65 @@ body {
   color: var(--text);
   background-color: var(--bg);
   position: relative;
-
-  background-image:
-          radial-gradient(
-                  1000px 420px at 50% 0%,
-                  rgba(43, 43, 54, 0.40),
-                  rgba(43, 43, 54, 0.04) 35%,
-                  transparent 70%
-          ),
-          radial-gradient(
-                  1000px 300px at 50% 10%,
-                  rgba(255, 255, 255, 0.04),
-                  transparent 70%
-          ),
-          linear-gradient(
-                  180deg,
-                  var(--bg-top) 0%,
-                  var(--bg) 38%,
-                  var(--bg-bottom) 100%
-          );
-
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-
-  background-image: url("/img/noise.png");
-  background-repeat: repeat;
-  opacity: 0.05;
-  //mix-blend-mode: soft-light;
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
 }
 
 .site {
   position: relative;
   z-index: 1;
+  max-width: 720px;
+  margin: auto;
+
+  &.is-large {
+    max-width: 960px;
+  }
+}
+
+.is-bold {
+  font-weight: 700;
+}
+
+h1, h2, h3 {
+  font-family: "Instrument Sans", sans-serif;
+  color: var(--accent);
+  letter-spacing: 3%;
+}
+
+h1 {
+  font-size: 48px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  background-color: var(--accent);
+  font-size: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bg);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all .2s;
+  font-weight: 700;
+
+  &:visited {
+    color: var(--bg);
+  }
+
+  &:hover {
+    color: var(--bg);
+    text-decoration: none;
+    background-color: var(--accent-light);
+  }
 }

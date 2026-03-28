@@ -12,5 +12,13 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 20px;
+    }
   }
 }

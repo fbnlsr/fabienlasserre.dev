@@ -1,5 +1,5 @@
 ---
-layout: "home.njk"
+layout: "layouts/home.njk"
 last_post_collection: "posts_fr"
 translationKey: "home"
 metaDesc: "Bonjour ! Je m'appelle Fabien et je suis développeur web full stack (Symfony, Vue.js), basé à Bordeaux. J'ai plus de 15 ans d'expérience et je travaille principalement avec des frameworks Open Source comme Symfony, Vue.js, WordPress, Gridsome ou Eleventy. Je produis un code solide, évolutif et rapide."

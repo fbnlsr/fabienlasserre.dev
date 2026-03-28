@@ -1,5 +1,5 @@
 ---
-layout: "home.njk"
+layout: "layouts/home.njk"
 last_post_collection: "posts_en"
 translationKey: "home"
 metaDesc: "Hello! My name is Fabien and I'm a fullstack web developer (Symfony, Vue.js) from Bordeaux, France. I have over 15 years of experience and I mainly work with Open Source frameworks such as Symfony, Vue.js, WordPress, Gridsome or Eleventy. I write solid, maintainable and fast code."

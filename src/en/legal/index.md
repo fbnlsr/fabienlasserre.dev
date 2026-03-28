@@ -1,7 +1,7 @@
 ---
-layout: 'page.njk'
-permalink: '/en/legal/'
-metaDesc: 'Legal.'
+layout: "layouts/page.njk"
+permalink: "/en/legal/"
+metaDesc: "Legal."
 ---
 # Legal
 

@@ -1,7 +1,7 @@
-{% set metaTitle = site[locale].metaTitle %}
-{% set metaDescription = site[locale].metaDescription %}
+{% set metaTitle = site[page.lang].metaTitle %}
+{% set metaDescription = site[page.lang].metaDescription %}
 <!DOCTYPE html>
-<html lang="{{ locale }}">
+<html lang="{{ page.lang }}">
 <head>
     <!-- General meta tags -->
     <meta charset="UTF-8">
@@ -10,9 +10,9 @@
         {%- set metaDescription = metaDesc -%}
     {%- else -%}
         {%- if title -%}
-            {%- set metaDescription = title + " | " + i18n[locale]['sitename'] -%}
+            {%- set metaDescription = title + " | " + i18n[page.lang]['sitename'] -%}
         {%- else -%}
-            {%- set metaDescription = i18n[locale]['sitename'] -%}
+            {%- set metaDescription = i18n[page.lang]['sitename'] -%}
         {%- endif -%}
     {%- endif -%}
     <meta name="description" content="{{ metaDescription }}" />
@@ -21,9 +21,9 @@
 
     <title>
         {%- if title -%}
-            {{ title | escape }} | {{ i18n[locale]['sitename'] }}
+            {{ title | escape }} | {{ i18n[page.lang]['sitename'] }}
         {%- else -%}
-            {{ i18n[locale]['sitename'] }}
+            {{ i18n[page.lang]['sitename'] }}
         {%- endif -%}
     </title>
 
@@ -39,7 +39,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
 
 
     <!-- Favicons -->
@@ -54,14 +57,14 @@
 
     <!-- Facebook Open Graph -->
     <meta property="og:title"
-          content="{%- if title -%}{{ title | escape }} | {{ i18n[locale]['sitename'] }}{%- else -%}{{ i18n[locale]['sitename'] }}{%- endif -%}" />
+          content="{%- if title -%}{{ title | escape }} | {{ i18n[page.lang]['sitename'] }}{%- else -%}{{ i18n[page.lang]['sitename'] }}{%- endif -%}" />
     <meta property="og:description"
-          content="{%- if excerpt -%}{{ excerpt | escape }} | {{ i18n[locale]['sitename'] }}{%- else -%}{{ i18n[locale]['sitename'] }}{%- endif -%}" />
-    <meta property="og:site_name" content="{{ i18n[locale]['sitename'] }}" />
+          content="{%- if excerpt -%}{{ excerpt | escape }} | {{ i18n[page.lang]['sitename'] }}{%- else -%}{{ i18n[page.lang]['sitename'] }}{%- endif -%}" />
+    <meta property="og:site_name" content="{{ i18n[page.lang]['sitename'] }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ site.url + page.url }}" />
     <meta property="og:image" content="{{ site.url }}/img/og.png" />
-    {% if locale == 'fr' -%}
+    {% if page.lang == 'fr' -%}
         <meta property="og:locale" content="fr_FR" />
     {%- else -%}
         <meta property="og:locale" content="en_US" />
@@ -72,15 +75,15 @@
 </head>
 <body>
 
-<main class="site {% if category == "404" -%}not-found-container{%- endif -%}" id="top">
+{% include "layouts/nav.njk" %}
 
-    {% include "./nav.njk" %}
+<main class="site {% if layout_size == "large" -%}is-large{%- endif -%}" id="top">
 
     {{ content | safe }}
 
 </main>
 
-{% include "./footer.njk" %}
+{% include "layouts/footer.njk" %}
 
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js'

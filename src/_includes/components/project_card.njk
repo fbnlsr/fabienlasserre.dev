@@ -1,0 +1,9 @@
+<div class="project-card">
+    <p class="title">{{ item.title }}</p>
+    <p class="description">{{ item.description }}</p>
+    <div class="stack">
+        {% for tech in stack %}
+            <span>{{ tech }}</span>
+        {% endfor %}
+    </div>
+</div>

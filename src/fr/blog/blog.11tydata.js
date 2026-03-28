@@ -23,7 +23,7 @@ export default function() {
         }
       },
     },
-    layout: 'blogpost.njk',
+    layout: 'layouts/blogpost.njk',
     tags: 'posts_fr',
     category: 'blog',
     permalink: '/fr/blog/{{ title | slugify }}/'
