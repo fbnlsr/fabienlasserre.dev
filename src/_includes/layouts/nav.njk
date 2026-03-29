@@ -1,10 +1,10 @@
-<nav class="nav-container noprint" aria-label="main navigation">
+<nav class="nav-container" aria-label="main navigation">
     <div class="content">
         <div>
             <a href="{{ "/" | locale_url }}"
                class="{% if page.url == '/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].home }}</a>
             <a href="{{ "/blog/" | locale_url }}"
-               class="{% if page.url == '/blog/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].blog }}</a>
+               class="{% if category == 'blog' %}is-bold{% endif %}">{{ i18n[page.lang].blog }}</a>
             <a href="{{ "/contact/" | locale_url }}"
                class="{% if page.url == '/contact/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].contact }}</a>
         </div>

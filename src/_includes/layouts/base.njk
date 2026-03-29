@@ -73,11 +73,11 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" media="all" href="{{ "/css/main.min.css" | url }}">
 </head>
-<body>
+<body class="{% if layout_size == "large" -%}is-large{%- endif -%}">
 
 {% include "layouts/nav.njk" %}
 
-<main class="site {% if layout_size == "large" -%}is-large{%- endif -%}" id="top">
+<main class="site" id="top">
 
     {{ content | safe }}
 

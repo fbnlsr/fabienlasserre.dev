@@ -18,7 +18,7 @@
     "home": "Accueil",
     "blog": "Blog",
     "contact": "Contact",
-    "publishedOn": "Publié le",
+    "backToBlog": "← Retour au blog",
     "contactMeCTA": "Me contacter",
     "yummyField": "Ne remplissez PAS ce champ :"
   },
@@ -41,7 +41,7 @@
     "home": "Home",
     "blog": "Blog",
     "contact": "Contact",
-    "publishedOn": "Published on",
+    "backToBlog": "← Back to the blog",
     "contactMeCTA": "Get in touch",
     "yummyField": "Do NOT fill this field:"
   }

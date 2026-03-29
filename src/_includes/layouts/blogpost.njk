@@ -1,56 +1,34 @@
 ---
 layout: "layouts/base.njk"
 ---
-<div class="blog-post" id="blogPostContainer">
-    <h1 class="title">{{ title }}</h1>
+<div class="blogpost">
+    <div class="header">
+        <h1>{{ title }}</h1>
 
-    <p class="date">
-        {{ i18n[locale]['publishedOn'] }}
-        {% humandate date,
-            locale %} - {{ content | readingTime }}.
-    </p>
+        <p class="date">
+            {% humandate date,
+                locale %} • {{ content | readingTime }}.
+        </p>
 
-    {%- if locale == 'fr' -%}
-        {%- set otherLocale = 'en' -%}
-    {%- else -%}
-        {%- set otherLocale = 'fr' -%}
-    {%- endif -%}
-
-    {%- if translationKey -%}
-        {%- for otherPost in collections["posts_" + otherLocale] -%}
-            {%- if otherPost.data.translationKey == translationKey -%}
-                <p class="is-translation-link noprint">
-                    <a class="is-lang-switcher" data-lang="en"
-                       href="{{ otherPost.url }}">{{ i18n[locale]['postAlsoAvailable'] }}</a>
-                </p>
-            {%- endif -%}
-        {%- endfor -%}
-    {%- endif -%}
+        <a class="backlink" href="{{ "/blog/" | locale_url }}">{{ i18n[locale]['backToBlog'] }}</a>
+    </div>
 
     <article>
+        {% if hasCover %}
+            {% set postDate = date | dateToRfc3339 %}
+            <div class="cover" style="background-image: url('/img/blog/{{ postDate.slice(0,10) }}/cover.webp')"></div>
+        {% endif %}
         {{ content | emojify | safe }}
     </article>
 
-    {%- if links.devto or links.medium -%}
-        <div class="links noprint">
-            <p>{{ i18n[locale]['postedTo'] }}</p>
-            <ul>
-                {%- if links.devto -%}
-                    <li>
-                        <a class="devto" href="{{ links.devto }}" aria-label="DevTo">
-                            <img src="/img/devto.webp" alt="Dev.to">
-                        </a>
-                    </li>
-                {%- endif -%}
-                {%- if links.medium -%}
-                    <li>
-                        <a class="medium" href="{{ links.medium }}" aria-label="Medium">
-                            <img src="/img/medium.svg" alt="Medium">
-                        </a>
-                    </li>
-                {%- endif -%}
-            </ul>
+    {% if cover %}
+        <hr />
+        <div class="credits">
+            {% if cover.link %}
+                Cover credits: <a href="{{ cover.link }}" target="_blank">{{ cover.author }}</a>.
+            {% else %}
+                Cover credits: {{ cover.author }}.
+            {% endif %}
         </div>
-    {%- endif -%}
-
+    {% endif %}
 </div>

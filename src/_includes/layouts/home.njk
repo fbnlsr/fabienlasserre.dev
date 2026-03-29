@@ -39,9 +39,13 @@ layout_size: "large"
     <div class="projects section">
         <h2>{{ projects }}</h2>
         <div class="content">
-            {% set projects = { en: projects_en, fr: projects_fr }[locale] or [] %}
-            {% for project in projects %}
-                {% set item = project %}
+            {% for project in projects_cards %}
+                {% set item = {
+                    cover: project.cover,
+                    title: project.title[locale],
+                    description: project.description[locale],
+                    stack: project.stack
+                } %}
                 {% include "components/project_card.njk" %}
             {% endfor %}
         </div>

@@ -5,19 +5,9 @@ layout: "layouts/base.njk"
 
 <div class="blog-list is-clearfix">
     {%- for post in collections["posts_" + locale] | reverse -%}
-        {% if post.data.translationKey !== 'blog' %}
-            <div class="blog-bloc">
-                <div class="blog-title-container">
-                    <p class="title">
-                        <a href="{{ post.url }}">
-                            {%- if post.data.draft == true -%}[DRAFT] - {% endif -%}{{ post.data.title }}</a>
-                    </p>
-                    <p class="date">
-                        {% humandate post.data.date,
-                            locale %} - {{ post.content | readingTime }}.
-                    </p>
-                </div>
-            </div>
-        {% endif %}
+        {% set date = post.date %}
+        {% set link = post.url %}
+        {% set title = post.data.title %}
+        {% include "components/blogpost_item.njk" %}
     {%- endfor -%}
 </div>

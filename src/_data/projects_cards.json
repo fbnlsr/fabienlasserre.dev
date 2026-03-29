@@ -1,0 +1,89 @@
+[
+  {
+    "title": {
+      "en": "Exeve",
+      "fr": "Exeve"
+    },
+    "cover": "/img/project-exeve.webp",
+    "description": {
+      "en": "Application de gestion d’inventaires et de vente aux enchères pour les commissaires-priseurs.",
+      "fr": "Application de gestion d’inventaires et de vente aux enchères pour les commissaires-priseurs."
+    },
+    "stack": [
+      "Symfony",
+      "Vue.js"
+    ]
+  },
+  {
+    "title": {
+      "en": "Notadoo",
+      "fr": "Notadoo"
+    },
+    "cover": "/img/project-notadoo.webp",
+    "description": {
+      "en": "Plateforme de gestion de projets immobiliers, avec formulaires KYC et génération de documents PDF.",
+      "fr": "Plateforme de gestion de projets immobiliers, avec formulaires KYC et génération de documents PDF."
+    },
+    "stack": [
+      "Symfony",
+      "Vue.js"
+    ]
+  },
+  {
+    "title": {
+      "en": "PACMAN",
+      "fr": "PACMAN"
+    },
+    "cover": "/img/project-pacman.webp",
+    "description": {
+      "en": "Application de pilotage d’équipes d’intervention techniques - KPI statistiques.",
+      "fr": "Application de pilotage d’équipes d’intervention techniques - KPI statistiques."
+    },
+    "stack": [
+      "Symfony",
+      "Vue.js"
+    ]
+  },
+  {
+    "title": {
+      "en": "Agence Saint Germain",
+      "fr": "Agence Saint Germain"
+    },
+    "cover": "/img/project-asg.webp",
+    "description": {
+      "en": "Site vitrine pour l’agence de talents parisienne Saint Germain.",
+      "fr": "Site vitrine pour l’agence de talents parisienne Saint Germain."
+    },
+    "stack": [
+      "Wordpress"
+    ]
+  },
+  {
+    "title": {
+      "en": "NySB",
+      "fr": "NySB"
+    },
+    "cover": "/img/project-nysb.webp",
+    "description": {
+      "en": "Site vitrine pour l’agence de communication visuelle New York Sous-Bois.",
+      "fr": "Site vitrine pour l’agence de communication visuelle New York Sous-Bois."
+    },
+    "stack": [
+      "Wordpress"
+    ]
+  },
+  {
+    "title": {
+      "en": "Cabinet A. Perney",
+      "fr": "Cabinet A. Perney"
+    },
+    "cover": "/img/project-aperney.webp",
+    "description": {
+      "en": "Site vitrine. Chef d’équipe projet en collaboration avec une DA et une équipe rédactionnelle.",
+      "fr": "Site vitrine. Chef d’équipe projet en collaboration avec une DA et une équipe rédactionnelle."
+    },
+    "stack": [
+      "Kirby"
+    ]
+  }
+]

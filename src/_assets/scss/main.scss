@@ -4,17 +4,19 @@
 @use 'nav';
 @use 'home';
 @use 'blog';
+@use 'project_card';
+@use 'footer';
 
 :root {
-  --bg: #21202B;
-  --bg-top: #1b1b28;
-  --bg-bottom: #151520;
+  --bg: #22202c;
+  --bg2: #16151C;
   --bg-nav: rgba(26, 26, 34, .5);
   --text: #f3f3f5;
   --accent: #f0b323;
   --accent-light: #ffc12f;
   --nav-border: rgba(255, 255, 255, .07);
   --gray: #777;
+  --gray2: #e5e5e5;
   --lightgray: #999;
 }
 
@@ -42,10 +44,19 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--text);
-  background-color: var(--bg);
   position: relative;
   font-family: "Mulish", sans-serif;
   font-size: 18px;
+  background-image: url("/img/bg.webp");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: var(--bg);
+
+  &.is-large {
+    .site {
+      max-width: 960px;
+    }
+  }
 }
 
 .site {
@@ -53,10 +64,6 @@ body {
   z-index: 1;
   max-width: 720px;
   margin: auto;
-
-  &.is-large {
-    max-width: 960px;
-  }
 }
 
 .is-bold {

@@ -1,9 +1,16 @@
 <div class="project-card">
-    <p class="title">{{ item.title }}</p>
-    <p class="description">{{ item.description }}</p>
-    <div class="stack">
-        {% for tech in stack %}
-            <span>{{ tech }}</span>
-        {% endfor %}
+    <div class="cover">
+        <img src="{{ item.cover }}" alt="Project cover" />
+    </div>
+    <div class="content">
+        <div class="top">
+            <p class="title">{{ item.title }}</p>
+            <p class="description">{{ item.description }}</p>
+        </div>
+        <div class="stack">
+            {% for tech in item.stack %}
+                <span>{{ tech }}</span>
+            {% endfor %}
+        </div>
     </div>
 </div>
