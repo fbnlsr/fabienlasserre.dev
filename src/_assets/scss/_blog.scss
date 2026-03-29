@@ -52,10 +52,8 @@
 
   hr {
     width: 75%;
-    margin: auto;
     background-color: var(--gray);
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
+    margin: 1.5rem auto 2rem;
     height: 1px;
     border: 0;
   }
@@ -66,15 +64,15 @@
       overflow: hidden;
       background-position: center center;
       background-size: cover;
-      border-radius: 5px;
+      border-radius: 8px;
       margin-bottom: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 12px var(--bg);
+      box-shadow: 0 0 12px var(--bg2);
 
       img {
-        border-radius: 5px;
+        border-radius: 8px;
       }
     }
 
@@ -85,6 +83,10 @@
 
       li {
         margin-bottom: 0.2rem;
+
+        &::marker {
+          color: var(--accent);
+        }
       }
     }
 

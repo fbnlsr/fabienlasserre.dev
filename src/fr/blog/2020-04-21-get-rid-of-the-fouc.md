@@ -10,11 +10,11 @@ links:
   devto: "https://dev.to/fbnlsr/how-to-get-rid-of-the-flash-of-unstyled-content-5e7"
   medium: "https://medium.com/@fbnlsr/how-to-get-rid-of-the-flash-of-unstyled-content-d6b79bf5d75f"
 ---
-Cette semaine j'ai pris un peu de temps pour travailler sur les performances de chargement de mon site. J'ai commencé par basculer de [Slick](https://kenwheeler.github.io/slick/) à [Glide.js](https://glidejs.com/) afin de totalement supprimer jQuery comme dépendance. Cela m'a permis de diviser la taille du JavaScript et de la CSS chargés de moitié (!). J'ai ensuite ajouté un cookie de préférence de langue. Puis, afin d'améliorer l'expérience utilisateur, j'ai ajouté une fonction qui permet de faire cette bascule automatiquement en fonction de la langue du navigateur.
+Cette semaine, j'ai pris un peu de temps pour travailler sur les performances de chargement de mon site. J'ai commencé par basculer de [Slick](https://kenwheeler.github.io/slick/) à [Glide.js](https://glidejs.com/) afin de totalement supprimer jQuery comme dépendance. Cela m'a permis de diviser la taille du JavaScript et de la CSS chargés de moitié (!). J'ai ensuite ajouté un cookie de préférence de langue. Puis, afin d'améliorer l'expérience utilisateur, j'ai ajouté une fonction qui permet de faire cette bascule automatiquement en fonction de la langue du navigateur.
 
 Tout se passait bien, mais je me suis rendu compte que mon site souffrait d'un [Flash Of Unstyled Content](https://fr.wikipedia.org/wiki/FOUC), ou "FOUC". C'était assez visible même avec le nouveau JavaScript et CSS en place : une fois un lien cliqué, la page commençait à être rendue pratiquement immédiatement avant que la CSS ne soit appliquée. C'est un phénomène particulièrement ennuyeux car cela retire l'utilisateur de cette expérience lisse et presque instantanée que je cherchais à atteindre. Heureusement, on peut rapidement se débarrasser de ce FOUC avec quelques petits trucs faciles à mettre en place.
 
-## Étape 1: On cache tout !
+## Étape 1 : On cache tout !
 
 La première chose à faire est tout simplement d'ajouter une instruction CSS au body afin de le cacher complètement jusqu'au moment où il est prêt à être affiché. Cela permet à la page d'être totalement chargée avant de pouvoir la présenter à l'utilisateur. Cela peut paraître contre-intuitif lorsque nous cherchons justement à gagner en performance et donc en vitesse, et là nous *ralentissons* les choses. Mais c'est un sacrifice nécessaire que nous faisons sur l'autel de l'expérience utilisateur.
 

@@ -20,9 +20,9 @@ layout_size: "large"
 
     <div class="about section">
         <h2>{{ about }}</h2>
-        <p>{{ about1 | safe }}</p>
-        <p>{{ about2 | safe }}</p>
-        <p>{{ about3 | markdownify | safe }}</p>
+        {{ about1 | markdownify | safe }}
+        {{ about2 | markdownify | safe }}
+        {{ about3 | markdownify | safe }}
     </div>
 
     <div class="posts section">

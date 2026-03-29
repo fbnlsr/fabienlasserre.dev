@@ -27,9 +27,9 @@ layout: "layouts/base.njk"
         <hr />
         <div class="credits">
             {% if cover.link %}
-                Cover credits: <a href="{{ cover.link }}" target="_blank">{{ cover.author }}</a>.
+                {{ i18n[locale]["coverCredits"] }} <a href="{{ cover.link }}" target="_blank">{{ cover.author }}</a>.
             {% else %}
-                Cover credits: {{ cover.author }}.
+                {{ i18n[locale]["coverCredits"] }} {{ cover.author }}.
             {% endif %}
         </div>
     {% endif %}

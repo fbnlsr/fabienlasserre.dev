@@ -1,6 +1,6 @@
 {
   "fr": {
-    "sitename": "Fabien Lasserre – Développeur web full stack",
+    "sitename": "Fabien Lasserre",
     "email": "E-mail",
     "phone": "Téléphone",
     "about": "À propos",
@@ -21,10 +21,11 @@
     "backToBlog": "← Retour au blog",
     "contactMeCTA": "Me contacter",
     "yummyField": "Ne remplissez PAS ce champ :",
-    "legal": "Mentions légales"
+    "legal": "Mentions légales",
+    "coverCredits": "Crédits de couverture :"
   },
   "en": {
-    "sitename": "Fabien Lasserre – Full stack web developer",
+    "sitename": "Fabien Lasserre",
     "email": "Email",
     "phone": "Phone",
     "about": "About",
@@ -45,6 +46,7 @@
     "backToBlog": "← Back to the blog",
     "contactMeCTA": "Get in touch",
     "yummyField": "Do NOT fill this field:",
-    "legal": "Legal"
+    "legal": "Legal",
+    "coverCredits": "Cover credits:"
   }
 }

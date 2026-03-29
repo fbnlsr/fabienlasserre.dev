@@ -39,7 +39,8 @@
     p {
       margin-bottom: 2rem;
 
-      &:last-child {
+      &:last-child,
+      &:last-of-type{
         margin-bottom: 0;
       }
     }

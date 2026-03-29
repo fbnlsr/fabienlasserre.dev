@@ -1,6 +1,5 @@
 ---
 layout: "layouts/page.njk"
-permalink: "/fr/mentions-legales/"
 metaDesc: "Mentions légales."
 ---
 
