@@ -8,9 +8,9 @@
             <p class="description">{{ item.description }}</p>
         </div>
         <div class="stack">
-            {% for tech in item.stack %}
+            {%- for tech in item.stack -%}
                 <span>{{ tech }}</span>
-            {% endfor %}
+            {%- endfor -%}
         </div>
     </div>
 </div>

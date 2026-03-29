@@ -1,6 +1,5 @@
 .project-card {
   width: 300px;
-  height: 375px;
   border-radius: 10px;
   background-color: var(--bg2);
   display: flex;
@@ -45,13 +44,14 @@
 
     .stack {
       span {
+        display: inline-block;
         color: var(--gray2);
         background-color: var(--bg);
         font-size: 14px;
         font-weight: 700;
         padding: 5px 10px;
         border-radius: 5px;
-        margin-right: 10px;
+        margin-right: 8px;
 
         &:last-child {
           margin-right: 0;
