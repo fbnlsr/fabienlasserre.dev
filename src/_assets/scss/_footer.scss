@@ -1,13 +1,3 @@
-body {
-  &.is-large {
-    .site-footer {
-      .content {
-        max-width: 960px;
-      }
-    }
-  }
-}
-
 .site-footer {
   margin-top: 100px;
   height: 70px;
@@ -18,16 +8,19 @@ body {
   align-items: center;
 
   .content {
-    max-width: 720px;
+    max-width: 960px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     font-family: "Mulish", sans-serif;
     font-size: 16px;
     color: var(--gray);
 
     a {
       text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

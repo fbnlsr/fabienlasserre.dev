@@ -26,6 +26,7 @@
     "sass": "^1.98.0"
   },
   "dependencies": {
+    "@11ty/eleventy-img": "^6.0.4",
     "highlight.js": "11.11.1",
     "html-minifier-next": "^5.2.2"
   },

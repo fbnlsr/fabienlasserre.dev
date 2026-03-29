@@ -20,7 +20,8 @@
     "contact": "Contact",
     "backToBlog": "← Retour au blog",
     "contactMeCTA": "Me contacter",
-    "yummyField": "Ne remplissez PAS ce champ :"
+    "yummyField": "Ne remplissez PAS ce champ :",
+    "legal": "Mentions légales"
   },
   "en": {
     "sitename": "Fabien Lasserre – Full stack web developer",
@@ -43,6 +44,7 @@
     "contact": "Contact",
     "backToBlog": "← Back to the blog",
     "contactMeCTA": "Get in touch",
-    "yummyField": "Do NOT fill this field:"
+    "yummyField": "Do NOT fill this field:",
+    "legal": "Legal"
   }
 }

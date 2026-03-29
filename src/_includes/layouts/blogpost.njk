@@ -16,7 +16,9 @@ layout: "layouts/base.njk"
     <article>
         {% if hasCover %}
             {% set postDate = date | dateToRfc3339 %}
-            <div class="cover" style="background-image: url('/img/blog/{{ postDate.slice(0,10) }}/cover.webp')"></div>
+            <div class="cover">
+                <img src="/img/blog/{{ postDate.slice(0,10) }}/cover.webp" alt="Post cover" width="720" />
+            </div>
         {% endif %}
         {{ content | emojify | safe }}
     </article>

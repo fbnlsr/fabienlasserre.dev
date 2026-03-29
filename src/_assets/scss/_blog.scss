@@ -68,16 +68,14 @@
       background-size: cover;
       border-radius: 5px;
       margin-bottom: 40px;
-    }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 12px var(--bg);
 
-    p {
-      margin-bottom: 1rem;
-      line-height: 175%;
-    }
-
-    h2 {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
+      img {
+        border-radius: 5px;
+      }
     }
 
     ul {
@@ -97,13 +95,24 @@
 
     img {
       max-width: 100%;
+      height: auto;
       border-radius: 5px;
+      align-self: center;
+    }
+
+    .is-blog-img {
+      text-align: center;
     }
 
     .is-blog-img-title {
       margin-top: 0;
       color: var(--gray);
       font-size: 16px;
+      text-align: center;
+    }
+
+    p:has(> picture) {
+      margin-top: 2rem;
       text-align: center;
     }
   }

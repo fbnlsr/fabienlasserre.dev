@@ -5,6 +5,7 @@ import pluginRss from '@11ty/eleventy-plugin-rss';
 import htmlmin from 'html-minifier-next';
 import markdownIt from 'markdown-it';
 import { I18nPlugin } from '@11ty/eleventy';
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/img/');
@@ -22,9 +23,11 @@ export default function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addPlugin(I18nPlugin, {
-    defaultLanguage: "fr",
-    errorMode: "allow-fallback"
+    defaultLanguage: 'fr',
+    errorMode: 'allow-fallback'
   });
+
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   // Markdown filter for applying to the "description" inside projects front matter
   const markdownItOptions = {
@@ -103,7 +106,7 @@ export default function(eleventyConfig) {
     templateFormats: ['md', 'njk', 'html', '11ty.js'],
     dir: {
       input: 'src',
-      output: 'dist',
+      output: 'dist'
     }
   };
 };
