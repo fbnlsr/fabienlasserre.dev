@@ -21,15 +21,18 @@
     }
   }
 
-  .content {
+  .card-content {
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
 
-    .top {
+    p {
+      margin-bottom: 1rem;
+    }
 
+    .top {
       .title {
         font-size: 20px;
         font-weight: 700;

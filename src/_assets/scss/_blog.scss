@@ -8,8 +8,12 @@
 
   span {
     color: var(--text);
-    margin-left: .5rem;
-    margin-right: .5rem;
+
+    &.separator {
+      color: var(--accent);
+      margin-left: .5rem;
+      margin-right: .5rem;
+    }
 
     &:first-of-type {
       margin-left: 0;
@@ -22,6 +26,25 @@
     &.date {
       color: var(--gray);
       font-family: "IBM Plex Mono", monospace;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    display: flex;
+    flex-direction: column-reverse;
+
+    span {
+      margin-left: 0;
+      margin-right: 0;
+
+      &:first-child {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      &.separator {
+        display: none;
+      }
     }
   }
 }
@@ -48,14 +71,6 @@
   .credits {
     font-size: 14px;
     color: var(--gray);
-  }
-
-  hr {
-    width: 75%;
-    background-color: var(--gray);
-    margin: 1.5rem auto 2rem;
-    height: 1px;
-    border: 0;
   }
 
   article {

@@ -1,5 +1,5 @@
 <div class="blogpost_item">
     {% set date = date | dateToRfc3339 %}
-    <span class="date">{{ date.slice(0,10) }}</span>&nbsp;•&nbsp;<span><a
+    <span class="date">{{ date.slice(0,10) }}</span><span class="separator">•</span><span><a
                 href="{{ link }}">{{ title }}</a></span>
 </div>

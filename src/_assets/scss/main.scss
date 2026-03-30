@@ -74,10 +74,15 @@ body {
   flex-grow: 1;
   width: 100%;
 
+
   .content {
     max-width: 720px;
     margin: auto;
     flex-grow: 1;
+
+    @media screen and (max-width: 960px) {
+      padding: 0 20px;
+    }
   }
 }
 
@@ -95,6 +100,11 @@ h1 {
   font-size: 48px;
   margin-top: 40px;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 960px) {
+    font-size: 40px;
+    margin-top: 20px;
+  }
 }
 
 h2 {
@@ -144,4 +154,12 @@ a {
     text-decoration: none;
     background-color: var(--accent-light);
   }
+}
+
+hr {
+  width: 75%;
+  background-color: var(--gray);
+  margin: 1.5rem auto 2rem;
+  height: 1px;
+  border: 0;
 }
