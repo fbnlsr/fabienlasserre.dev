@@ -1,5 +1,5 @@
 ---
-title: "Markdown, Git, Obsidian… puis Joplin : mon setup actuel"
+title: "De Markdown, Git et Obsidian à Joplin : mon setup actuel"
 date: 2026-03-24
 translationKey: "blogJoplin"
 excerpt: "Après des années à chercher l’outil parfait, j’ai finalement laissé tomber Obsidian pour Joplin — une solution Markdown simple, efficace et enfin alignée avec mon workflow de développeur."

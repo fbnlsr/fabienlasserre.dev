@@ -1,5 +1,5 @@
 ---
-title: "Markdown, Git, Obsidian... then Joplin: my note-taking setup"
+title: "From Markdown, Git and Obsidian to Joplin: my note-taking setup"
 date: 2026-03-24
 translationKey: "blogJoplin"
 excerpt: "After years of chasing the perfect tool, I finally ditched Obsidian for Joplin — a simple, efficient Markdown setup that actually fits my developer workflow."
