@@ -80,13 +80,14 @@
 
 {% include "layouts/nav.njk" %}
 
-<main class="site" id="top">
+<div class="site" id="top">
+    <div class="content">
+        {{ content | safe }}
+    </div>
 
-    {{ content | safe }}
+    {% include "layouts/footer.njk" %}
+</div>
 
-</main>
-
-{% include "layouts/footer.njk" %}
 
 <!-- Cloudflare Web Analytics -->
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js'

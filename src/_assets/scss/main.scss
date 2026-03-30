@@ -6,6 +6,7 @@
 @use 'blog';
 @use 'project_card';
 @use 'footer';
+@use 'contact';
 
 :root {
   --bg: #22202c;
@@ -51,10 +52,14 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
 
   &.is-large {
     .site {
-      max-width: 960px;
+      .content {
+        max-width: 960px;
+      }
     }
   }
 }
@@ -62,8 +67,18 @@ body {
 .site {
   position: relative;
   z-index: 1;
-  max-width: 720px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
+
+  .content {
+    max-width: 720px;
+    margin: auto;
+    flex-grow: 1;
+  }
 }
 
 .is-bold {
