@@ -1,8 +1,7 @@
 .contact-container {
-  background-color: var(--bg);
+  background-color: var(--bg2);
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 12px var(--bg);
   margin-top: 40px;
 
   .form-item {
@@ -10,6 +9,10 @@
     flex-direction: column;
     margin-bottom: 20px;
     justify-content: start;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &.form-item-btn {
       align-items: start;
@@ -39,7 +42,8 @@
       margin-bottom: 5px;
     }
 
-    input {
+    input,
+    textarea {
       padding: 10px;
       border-radius: 5px;
       border: 0;

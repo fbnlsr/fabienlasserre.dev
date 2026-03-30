@@ -28,16 +28,16 @@
 
 .blogpost {
   .header {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     h1 {
       font-size: 32px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     .date {
       color: var(--gray);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     .backlink {
@@ -70,6 +70,7 @@
       justify-content: center;
       align-items: center;
       box-shadow: 0 0 12px var(--bg2);
+      background-color: var(--bg2);
 
       img {
         border-radius: 8px;
@@ -116,6 +117,16 @@
     p:has(> picture) {
       margin-top: 2rem;
       text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--text);
+      border-bottom: 1px dotted var(--accent);
+
+      &:hover {
+        border-bottom: 1px solid var(--accent);
+      }
     }
   }
 }
