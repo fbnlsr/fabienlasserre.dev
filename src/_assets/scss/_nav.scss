@@ -23,6 +23,11 @@
       color: var(--accent);
       text-decoration: none;
       margin-right: 20px;
+      border: none;
+
+      &:hover {
+        border-bottom: 1px solid var(--accent);
+      }
     }
 
     @media screen and (max-width: 960px) {
@@ -77,6 +82,9 @@
 
     a {
       margin-bottom: 20px;
+      text-decoration: none;
+      color: var(--accent);
+      border: none;
 
       &:last-child {
         margin-bottom: 0;
