@@ -69,6 +69,7 @@ Here are the plugins I currently use:
 - [Rich Markdown](https://joplinapp.org/plugins/plugin/plugin.calebjohn.rich-markdown/)
 - [YesYouKan](https://joplinapp.org/plugins/plugin/org.joplinapp.plugins.YesYouKan/)
 - [Better Tables](https://joplinapp.org/plugins/plugin/com.ckant.joplin-plugin-better-tables/)
+- [Markdown Emoji Autocomplete](https://joplinapp.org/plugins/plugin/de.pernpas.joplin.markdown.emoji.autocomplete/)
 
 The files are still plain Markdown, with a slightly specific frontmatter that can easily be filtered out if needed. I’ve been able to disable all the unnecessary options (split view, extra UI clutter…), and there’s also a tagging system — not useful for me right now, but potentially interesting in the future.
 
