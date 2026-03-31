@@ -68,6 +68,7 @@ Voici ceux que j’utilise actuellement :
 - [Hotstrings & Hotkeys](https://joplinapp.org/plugins/plugin/joplin.plugin.hotstrings/)
 - [Rich Markdown](https://joplinapp.org/plugins/plugin/plugin.calebjohn.rich-markdown/)
 - [YesYouKan](https://joplinapp.org/plugins/plugin/org.joplinapp.plugins.YesYouKan/)
+- [Better Tables](https://joplinapp.org/plugins/plugin/com.ckant.joplin-plugin-better-tables/)
 
 Les fichiers restent du Markdown, avec un frontmatter spécifique mais facilement filtrable si besoin. J’ai pu désactiver toutes les options inutiles (vue split, réglages superflus…), et il existe également un système de tags — inutile pour l’instant, mais potentiellement intéressant à l’avenir.
 
