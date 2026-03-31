@@ -78,14 +78,14 @@
 </head>
 <body class="{% if layout_size == "large" -%}is-large{%- endif -%}">
 
-{% include "layouts/nav.njk" %}
+{% include "components/nav.njk" %}
 
 <div class="site" id="top">
     <div class="content">
         {{ content | safe }}
     </div>
 
-    {% include "layouts/footer.njk" %}
+    {% include "components/footer.njk" %}
 </div>
 
 
@@ -95,6 +95,7 @@
 <!-- End Cloudflare Web Analytics -->
 
 <script src="//unpkg.com/alpinejs" defer></script>
+<script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
 <script type="module" src="{{ "/js/main.js" | url }}" defer></script>
 </body>
 </html>
