@@ -28,11 +28,15 @@ layout_size: "large"
     <div class="posts section">
         <h2>{{ lastPosts }}</h2>
         {% set posts = collections["posts_" ~ locale] | reverse %}
-        {% for post in posts.slice(0,3) %}
-            {% set date = post.date %}
-            {% set title = post.data.title %}
-            {% set link = post.url %}
-            {% include "components/blogpost_item.njk" %}
+        {% set count = 0 %}
+        {% for post in posts %}
+            {% if count < 3 and post.data.draft != true %}
+                {% set date = post.date %}
+                {% set title = post.data.title %}
+                {% set link = post.url %}
+                {% set count = count + 1 %}
+                {% include "components/blogpost_item.njk" %}
+            {% endif %}
         {% endfor %}
     </div>
 

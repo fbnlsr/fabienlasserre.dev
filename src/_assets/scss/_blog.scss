@@ -143,5 +143,24 @@
         border-bottom: 1px solid var(--accent);
       }
     }
+
+    blockquote {
+      padding: .75rem 1rem;
+      background-color: var(--bg2);
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-left: 2px solid var(--accent);
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+
+      p {
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
