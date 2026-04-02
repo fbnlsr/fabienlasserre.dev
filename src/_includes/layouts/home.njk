@@ -38,6 +38,7 @@ layout_size: "large"
                 {% include "components/blogpost_item.njk" %}
             {% endif %}
         {% endfor %}
+        <a class="link-accent blog-link" href="{{ "/blog/" | locale_url }}">{{ i18n[locale]["allBlogPosts"] }}</a>
     </div>
 
     <div class="projects section">

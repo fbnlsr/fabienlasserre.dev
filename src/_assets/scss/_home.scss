@@ -11,7 +11,9 @@
   }
 
   .section {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
   }
 
   .hero {
@@ -68,6 +70,12 @@
       &:last-of-type {
         margin-bottom: 0;
       }
+    }
+  }
+
+  .posts {
+    .blog-link {
+      margin-top: .5rem;
     }
   }
 
