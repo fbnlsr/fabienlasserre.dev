@@ -185,3 +185,29 @@ hr {
   height: 1px;
   border: 0;
 }
+
+.go-to-top {
+  transition: all 0.25s ease-out;
+  position: fixed;
+  bottom: 60px;
+  right: 50px;
+  background-color: var(--accent);
+  color: var(--bg2);
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  text-align: center;
+  opacity: 0;
+  z-index: 9001;
+
+  a,
+  a:visited,
+  a:hover {
+    color: inherit;
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-decoration: none;
+    border: none;
+  }
+}
