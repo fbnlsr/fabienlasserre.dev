@@ -20,7 +20,7 @@ const domReady = (callback) => {
 const displayTopArrow = (el, scrollPos) => {
   const arrow = el;
   if (scrollPos > 100) {
-    arrow.style.opacity = 1;
+    arrow.style.opacity = .9;
     arrow.style.bottom = '80px';
   } else {
     arrow.style.opacity = 0;
@@ -84,12 +84,14 @@ domReady(() => {
   if (modeSwitcher && modeSwitcher.length > 0) {
     modeSwitcher.forEach((el) => {
       el.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-
-        if (document.body.classList.contains('dark-mode')) {
+        if (document.documentElement.dataset.theme === 'light') {
           localStorage.setItem('mode', 'dark');
+          document.documentElement.dataset.theme = 'dark';
+          el.src = `/img/sun.svg?v=${Date.now()}`;
         } else {
           localStorage.setItem('mode', 'light');
+          document.documentElement.dataset.theme = 'light';
+          el.src = `/img/moon.svg?v=${Date.now()}`;
         }
       });
     });

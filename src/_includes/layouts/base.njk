@@ -73,6 +73,14 @@
         <meta property="og:locale" content="en_US" />
     {%- endif %}
 
+    <!-- Theme -->
+    <script>
+      const saved = localStorage.getItem('mode');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (systemDark ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    </script>
+
     <!-- Stylesheets -->
     <link rel="stylesheet" media="all" href="{{ "/css/main.min.css" | url }}">
 </head>
@@ -104,6 +112,7 @@
 
 <script src="//unpkg.com/alpinejs" defer></script>
 <script type="module" src="{{ "/js/main.js" | url }}" defer></script>
-<script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+<script src="//instant.page/5.2.0" type="module"
+        integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
 </body>
 </html>

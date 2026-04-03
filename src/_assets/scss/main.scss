@@ -20,9 +20,33 @@
   --gray: #777;
   --gray2: #e5e5e5;
   --lightgray: #999;
+  --badge-bg: #16151C;
+  --badge-text: #f3f3f5;
+  --btn-text: #16151C;
+
+  body {
+    background-image: url("/img/bg.webp");
+  }
 }
 
-*{
+:root[data-theme="light"] {
+  --bg: #D2D9ED;
+  --bg2: #F4F5FA;
+  --text: #1B1B2D;
+  --badge-bg: #1B1B2D;
+  --badge-text: #E5E5E5;
+  --bg-nav: rgba(255, 255, 255, .35);
+  --nav-border: rgba(0, 0, 0, .1);
+  --gray: #555555;
+  --lightgray: #555555;
+  --btn-text: #E5E5E5;
+
+  body {
+    background-image: url("/img/bg-light.webp");
+  }
+}
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -49,12 +73,12 @@ body {
   position: relative;
   font-family: "Mulish", sans-serif;
   font-size: 18px;
-  background-image: url("/img/bg.webp");
   background-position: top center;
   background-repeat: no-repeat;
   background-color: var(--bg);
   display: flex;
   flex-direction: column;
+  transition: all .2s ease-out;
 
   @media screen and (max-width: 768px) {
     font-size: 16px;
@@ -161,18 +185,18 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: var(--bg);
+  color: var(--btn-text);
   padding: 10px 20px;
   border-radius: 5px;
   transition: all .2s;
   font-weight: 700;
 
   &:visited {
-    color: var(--bg);
+    color: var(--btn-text);
   }
 
   &:hover {
-    color: var(--bg);
+    color: var(--btn-text);
     text-decoration: none;
     background-color: var(--accent-light);
   }

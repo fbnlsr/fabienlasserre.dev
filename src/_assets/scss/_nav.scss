@@ -28,6 +28,22 @@
       &:hover {
         border-bottom: 1px solid var(--accent);
       }
+
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 20px;
+        height: 20px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
     }
 
     @media screen and (max-width: 960px) {
