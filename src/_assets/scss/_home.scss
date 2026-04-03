@@ -18,6 +18,7 @@
 
   .hero {
     display: flex;
+    flex-direction: row;
 
     @media screen and (max-width: 960px) {
       flex-direction: column;
