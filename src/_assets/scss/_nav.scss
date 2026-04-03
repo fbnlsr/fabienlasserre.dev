@@ -44,11 +44,14 @@
 .navbar-mobile-container {
   width: 100%;
   background-color: var(--bg);
+  opacity: 0.95;
   padding: 20px;
   flex-direction: column;
   z-index: 2;
   border-bottom: 1px solid var(--nav-border);
   display: none;
+  position: fixed;
+  min-height: 70px;
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -59,9 +62,16 @@
     display: none;
     color: white;
 
+    picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     @media screen and (max-width: 768px) {
       display: flex;
       justify-content: end;
+      align-items: center;
     }
 
     img {
@@ -75,6 +85,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-size: 20px;
 
     hr {
       margin: .75rem auto 1.2rem;

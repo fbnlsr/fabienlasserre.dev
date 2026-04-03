@@ -25,15 +25,15 @@
         <img id="x" src="/img/x.svg" alt="Burger" x-show="open" @click="open = !open" />
     </div>
     <div class="nav-mobile-content" x-show="open">
-        <a href="{{ "/" | locale_url }}"
+        <a class="link-accent" href="{{ "/" | locale_url }}"
            class="{% if page.url == '/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].home }}</a>
-        <a href="{{ "/blog/" | locale_url }}"
+        <a class="link-accent" href="{{ "/blog/" | locale_url }}"
            class="{% if category == 'blog' %}is-bold{% endif %}">{{ i18n[page.lang].blog }}</a>
-        <a href="{{ "/contact/" | locale_url }}"
+        <a class="link-accent" href="{{ "/contact/" | locale_url }}"
            class="{% if page.url == '/contact/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].contact }}</a>
         <hr />
         {% for link in page.url | locale_links %}
-            <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
+            <a class="link-accent" href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
                 {{ link.label }}
             </a>
         {% endfor %}
