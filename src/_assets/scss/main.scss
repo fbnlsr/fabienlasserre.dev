@@ -1,6 +1,6 @@
 @use "sass:color";
-@use 'dracula_prism';
-@use 'dracula';
+@use 'code';
+@use 'code_light';
 @use 'nav';
 @use 'home';
 @use 'blog';
@@ -9,41 +9,23 @@
 @use 'contact';
 
 :root {
-  --bg: #22202c;
-  --bg2: #16151C;
-  --bg-blockquote: #16151C77;
-  --bg-nav: rgba(26, 26, 34, .5);
-  --text: #f3f3f5;
-  --accent: #f0b323;
-  --accent-light: #ffc12f;
-  --nav-border: rgba(255, 255, 255, .07);
-  --gray: #777;
-  --gray2: #e5e5e5;
-  --lightgray: #999;
-  --badge-bg: #16151C;
-  --badge-text: #f3f3f5;
-  --btn-text: #16151C;
-
-  body {
-    background-image: url("/img/bg.webp");
-  }
+  --bg: #181727;
+  --bg2: #08080D;
+  --bg-tags: #21202B;
+  --text: #F3F3F5;
+  --text-secondary: #A0A0AA;
+  --accent: #F5B82E;
+  --nav-border: rgba(255, 255, 255, .2);
 }
 
 :root[data-theme="light"] {
-  --bg: #D2D9ED;
-  --bg2: #F4F5FA;
-  --text: #1B1B2D;
-  --badge-bg: #1B1B2D;
-  --badge-text: #E5E5E5;
-  --bg-nav: rgba(255, 255, 255, .35);
-  --nav-border: rgba(0, 0, 0, .1);
-  --gray: #555555;
-  --lightgray: #555555;
-  --btn-text: #E5E5E5;
-
-  body {
-    background-image: url("/img/bg-light.webp");
-  }
+  --bg: #F3F2F7;
+  --bg2: #E7E5Ef;
+  --bg-tags: #FCFBFE;
+  --text: #22212B;
+  --text-secondary: #5F5B69;
+  --accent: #F5A52EFF;
+  --nav-border: rgba(34, 33, 43, .2);
 }
 
 * {
@@ -62,7 +44,6 @@ body {
 }
 
 html {
-  background: var(--bg);
   scroll-behavior: smooth;
 }
 
@@ -185,26 +166,25 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: var(--btn-text);
+  color: var(--bg);
   padding: 10px 20px;
   border-radius: 5px;
   transition: all .2s;
   font-weight: 700;
 
   &:visited {
-    color: var(--btn-text);
+    color: var(--bg);
   }
 
   &:hover {
-    color: var(--btn-text);
+    color: var(--bg);
     text-decoration: none;
-    background-color: var(--accent-light);
   }
 }
 
 hr {
   width: 75%;
-  background-color: var(--gray);
+  background-color: var(--text-secondary);
   margin: 1.5rem auto 2rem;
   height: 1px;
   border: 0;

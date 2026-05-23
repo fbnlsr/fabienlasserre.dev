@@ -4,14 +4,17 @@
   background-color: var(--bg2);
   display: flex;
   flex-direction: column;
+  border: 1px solid color-mix(in srgb, var(--text) 20%, transparent);
 
   .cover, .cover img {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 
     img {
       transition: all .2s ease-in;
       opacity: .9;
+      display: block;
+      width: 100%;
     }
   }
 
@@ -41,15 +44,15 @@
 
       .description {
         font-size: 16px;
-        color: var(--gray);
+        color: var(--text-secondary);
       }
     }
 
     .stack {
       span {
         display: inline-block;
-        color: var(--badge-text);
-        background-color: var(--badge-bg);
+        color: var(--text);
+        background-color: var(--bg-tags);
         font-size: 14px;
         font-weight: 700;
         padding: 5px 10px;

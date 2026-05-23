@@ -20,7 +20,7 @@
     }
 
     &.date {
-      color: var(--gray);
+      color: var(--text-secondary);
       font-family: "IBM Plex Mono", monospace;
     }
   }
@@ -55,7 +55,7 @@
     }
 
     .date {
-      color: var(--gray);
+      color: var(--text-secondary);
       margin-bottom: 10px;
     }
 
@@ -72,7 +72,7 @@
 
   .credits {
     font-size: 14px;
-    color: var(--gray);
+    color: var(--text-secondary);
   }
 
   article {
@@ -124,7 +124,7 @@
 
     .is-blog-img-title {
       margin-top: 0;
-      color: var(--gray);
+      color: var(--text-secondary);
       font-size: 16px;
       text-align: center;
     }
