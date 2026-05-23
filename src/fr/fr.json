@@ -1,3 +1,12 @@
 {
-  "locale": "fr"
+  "locale": "fr",
+  "jobTitle": "<strong>Développeur Full Stack Senior</strong>",
+  "stack": "Symfony • Vue.js • REST / GraphQL",
+  "contactMe": "Me contacter",
+  "about": "À propos",
+  "about1": "Je travaille sur des applications web **depuis plus de 15 ans**, en freelance et au sein d'équipes produit.",
+  "about2": "J’interviens surtout sur des projets **Symfony** et **Vue.js**, avec une attention particulière portée à la clarté du code, à la robustesse de l’ensemble et à la simplicité des choix techniques.",
+  "about3": "Vous pouvez me retrouver sur [Github](https://github.com/fbnlsr), [Bluesky](https://bsky.app/profile/fabienlasserre.dev), [LinkedIn](https://www.linkedin.com/in/fbnlsr/), [Malt](https://www.malt.fr/profile/fabienlasserre).",
+  "lastPosts": "Derniers articles",
+  "projects": "Projets"
 }

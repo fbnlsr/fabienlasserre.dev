@@ -1,6 +1,0 @@
-{
-  "tags": "projects_en",
-  "permalink": "/en/project/{{ slug }}/",
-  "layout": "project.njk",
-  "category": "projects"
-}

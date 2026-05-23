@@ -12,14 +12,14 @@ For the past year or so, [DDEV](https://ddev.com/) has been my go-to tool for se
 
 ---
 
-My web stack of choice is Symfony as an API (either RESTful or using GraphQL) and a frontend using Vue.js. I used to rely on [NVM](https://github.com/nvm-sh/nvm) or [Volta](https://volta.sh/) and make use of my locally installed Node instance, but I wanted to have something completely portable - something where I could just clone a repo, run `ddev start` and get to work. To achieve that, we're going to set things up as follows:
+My web stack of choice is Symfony as an API (either RESTful or using GraphQL) and a frontend using Vue.js. I used to rely on [NVM](https://github.com/nvm-sh/nvm) or [Volta](https://volta.sh/) and make use of my locally installed Node instance, but I wanted to have something completely portable – something where I could just clone a repo, run `ddev start` and get to work. To achieve that, we're going to set things up as follows:
 
 - Set up the PHP container and Symfony
 - Freeze the Node version and install Vue.js
 - Add a reverse proxy to access the frontend
 - Enhance the DX thanks to a Makefile
 
-For this project, we're going to use a made-up domain - let's say `tinydev.ddev.site` - and have the API available at `api.tinydev.ddev.site` and the web app at `app.tinydev.ddev.site`. I'm going to assume you already have Docker and [DDEV installed](https://ddev.com/get-started/) and ready to use.
+For this project, we're going to use a made-up domain - let's say `tinydev.ddev.site` - and have the API available at`api.tinydev.ddev.site` and the web app at `app.tinydev.ddev.site`. I'm going to assume you already have Docker and [DDEV installed](https://ddev.com/get-started/) and ready to use.
 
 To keep things tidy, we'll use the following folder structure:
 
@@ -86,7 +86,7 @@ final class HomeController extends AbstractController
 }
 ```
 
-You can go ahead and point your web browser to https://tinydev.ddev.site` and you should be greeted with a "Hello, World!" message. If not, don't hesitate to restart DDEV with `ddev restart`.
+You can go ahead and point your web browser to https://tinydev.ddev.site, and you should be greeted with a "Hello, World!" message. If not, don't hesitate to restart DDEV with `ddev restart`.
 
 At this point, `https://app.tinydev.ddev.site` is also pointing to Symfony. Let's take care of that.
 
@@ -175,7 +175,8 @@ If you now point your browser to `https://app.tinydev.ddev.site`, you should see
 
 We now have a working project using Symfony and Vue.js entirely containerized thanks to DDEV! Yay! :tada:
 
-You can now enjoy your web app on `https://app.tinydev.ddev.site`, and send calls to your API that's residing on `https://api.tinydev.ddev.site`.
+You can now enjoy your web app on `https://app.tinydev.ddev.site`, and send calls to your API that's residing on
+`https://api.tinydev.ddev.site`.
 
 Let's finally add a bit of magic and enhance our Developer Experience thanks to a simple Makefile.
 

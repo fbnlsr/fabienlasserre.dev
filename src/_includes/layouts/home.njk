@@ -1,0 +1,58 @@
+---
+layout: "layouts/base.njk"
+layout_size: "large"
+---
+<div class="home">
+    <h1>Fabien Lasserre</h1>
+
+    <div class="hero section">
+        <img src="/img/me.webp" alt="Fabien Lasserre" eleventy:ignore />
+        <div class="details">
+            <div>
+                <p class="title">{{ jobTitle | safe }}</p>
+                <p class="stack">{{ stack }}</p>
+            </div>
+            <div>
+                <a class="btn" href="{{ "/contact/" | locale_url }}">{{ contactMe }}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="about section">
+        <h2>{{ about }}</h2>
+        {{ about1 | markdownify | safe }}
+        {{ about2 | markdownify | safe }}
+        {{ about3 | markdownify | safe }}
+    </div>
+
+    <div class="posts section">
+        <h2>{{ lastPosts }}</h2>
+        {% set posts = collections["posts_" ~ locale] | reverse %}
+        {% set count = 0 %}
+        {% for post in posts %}
+            {% if count < 3 and post.data.draft != true %}
+                {% set date = post.date %}
+                {% set title = post.data.title %}
+                {% set link = post.url %}
+                {% set count = count + 1 %}
+                {% include "components/blogpost_item.njk" %}
+            {% endif %}
+        {% endfor %}
+        <a class="link-accent blog-link" href="{{ "/blog/" | locale_url }}">{{ i18n[locale]["allBlogPosts"] }}</a>
+    </div>
+
+    <div class="projects section">
+        <h2>{{ projects }}</h2>
+        <div class="content">
+            {% for project in projects_cards %}
+                {% set item = {
+                    cover: project.cover,
+                    title: project.title[locale],
+                    description: project.description[locale],
+                    stack: project.stack
+                } %}
+                {% include "components/project_card.njk" %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

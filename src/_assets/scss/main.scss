@@ -1,86 +1,31 @@
 @use "sass:color";
-@use 'dracula_prism';
-@use 'dracula';
-@use '../../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
-@use 'variables';
+@use 'code';
+@use 'code_light';
 @use 'nav';
 @use 'home';
-@use 'contact';
-@use 'about';
-@use 'projects';
-@use 'project';
 @use 'blog';
-@use 'page';
-@use 'fourofour';
+@use 'project_card';
 @use 'footer';
+@use 'contact';
 
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Montserrat'), url(/fonts/montserrat.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+:root {
+  --bg: #181727;
+  --bg2: #08080D;
+  --bg-tags: #21202B;
+  --text: #f4f3f5;
+  --text-secondary: #A0A0AA;
+  --accent: #F5B82E;
+  --nav-border: rgba(255, 255, 255, .2);
 }
 
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/montserrat.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(/fonts/montserrat.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: local('Nunito Sans'), url(/fonts/nunitosans.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: italic;
-  font-weight: 400;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url(/fonts/nunitosansitalic.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Nunito Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: 100%;
-  font-display: swap;
-  src: url(/fonts/nunitosansbold.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-  U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-  U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+:root[data-theme="light"] {
+  --bg: #F3F2F7;
+  --bg2: #F2F4F8;
+  --bg-tags: #FCFBFE;
+  --text: #22212B;
+  --text-secondary: #545360;
+  --accent: #F49910;
+  --nav-border: rgba(34, 33, 43, .2);
 }
 
 * {
@@ -103,143 +48,176 @@ html {
 }
 
 body {
-  background-color: variables.$background;
-  color: variables.$text;
-  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  position: relative;
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: var(--bg);
   display: flex;
   flex-direction: column;
+  transition: all .2s ease-out;
 
-  &.dark-mode {
-    background-color: variables.$bgdark;
-    color: variables.$textdark;
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
   }
-}
 
-h1 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-hr {
-  background-color: variables.$blue;
-}
-
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-.btn {
-  display: inline-block;
-  text-align: center;
-  margin-bottom: 3rem;
-  border-radius: 4px;
-  color: variables.$blue;
-  outline: 0;
-
-  a {
-    text-align: center;
-    border-radius: 4px;
-    border: 1px solid variables.$blue;
-    padding: 0.5rem 0.75rem;
-    color: variables.$blue;
-    transition: color 0.2s ease-out, background-color 0.2s ease-out;
-
-    &:hover,
-    &:active,
-    &:visited {
-      color: inherit;
-    }
-
-    &:hover {
-      background-color: variables.$blue;
-      color: variables.$background;
+  &.is-large {
+    .site {
+      .content {
+        max-width: 960px;
+      }
     }
   }
-}
-
-button,
-button:focus,
-button:active {
-  outline: 0;
-}
-
-.column.is-half,
-.column.is-half-tablet {
-  width: initial;
-  flex: 1;
 }
 
 .site {
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   flex-grow: 1;
+  width: 100%;
+
+
+  .site-content {
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    flex-grow: 1;
+
+    .inner-page {
+      max-width: 720px;
+      margin: auto;
+    }
+
+    @media screen and (max-width: 960px) {
+      padding: 0 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      max-width: 100%;
+      padding-top: 70px;
+    }
+  }
 }
 
-.white-container {
-  background-color: white;
-  border: 1px solid variables.$blue;
-  padding: 1rem;
+.is-bold {
+  font-weight: 700;
+}
+
+h1, h2, h3 {
+  font-family: "Instrument Sans", sans-serif;
+  color: var(--accent);
+  letter-spacing: 3%;
+}
+
+h1 {
+  font-size: 48px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 960px) {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: "Mulish", sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: .75rem;
+  color: var(--text);
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 160%;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+
+  &.link-accent {
+    text-decoration: none;
+    color: var(--accent);
+    border: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.btn {
+  background-color: var(--accent);
+  font-size: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bg);
+  padding: 10px 20px;
   border-radius: 5px;
-}
+  transition: all .2s;
+  font-weight: 700;
 
-.mode-switch {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  z-index: 8999;
-
-  img {
-    width: 25px;
+  &:visited {
+    color: var(--bg);
   }
 
-  #darkSwitch {
+  &:hover {
+    color: var(--bg);
+    text-decoration: none;
+  }
+}
+
+hr {
+  width: 75%;
+  background-color: var(--text-secondary);
+  margin: 1.5rem auto 2rem;
+  height: 1px;
+  border: 0;
+}
+
+.go-to-top {
+  transition: all 0.25s ease-out;
+  position: fixed;
+  bottom: 0;
+  right: 30px;
+  background-color: var(--accent);
+  color: var(--bg2);
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  text-align: center;
+  opacity: 0;
+  z-index: 9001;
+
+  a,
+  a:visited,
+  a:hover {
+    color: inherit;
+    width: 30px;
+    height: 30px;
     display: block;
-  }
-
-  #lightSwitch {
-    display: none;
-  }
-}
-
-.lang-choser {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  z-index: 8999;
-}
-
-body.dark-mode {
-  .mode-switch {
-    #darkSwitch {
-      display: none;
-    }
-
-    #lightSwitch {
-      display: block;
-    }
-  }
-
-  .white-container {
-    background-color: color.adjust(variables.$bgdark, $lightness: 3%, $space: hsl);
-    border: 1px solid color.adjust(variables.$blue, $lightness: 20%, $space: hsl);
-  }
-}
-
-.is-hidden-mobile {
-  @media screen and (max-width: 768px) {
-    display: none !important;
-  }
-}
-
-@media screen {
-  .noscreen {
-    display: none !important;
-  }
-}
-
-@media print {
-  .noprint {
-    display: none !important;
+    text-decoration: none;
+    border: none;
   }
 }

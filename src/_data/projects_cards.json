@@ -1,0 +1,89 @@
+[
+  {
+    "title": {
+      "en": "Exeve",
+      "fr": "Exeve"
+    },
+    "cover": "/img/project-exeve.webp",
+    "description": {
+      "en": "Inventory management and auction sales application for auctioneers.",
+      "fr": "Application de gestion d’inventaires et de vente aux enchères pour les commissaires-priseurs."
+    },
+    "stack": [
+      "Symfony",
+      "Vue.js"
+    ]
+  },
+  {
+    "title": {
+      "en": "Notadoo",
+      "fr": "Notadoo"
+    },
+    "cover": "/img/project-notadoo.webp",
+    "description": {
+      "en": "Real estate project management platform, with KYC forms and PDF document generation.",
+      "fr": "Plateforme de gestion de projets immobiliers, avec formulaires KYC et génération de documents PDF."
+    },
+    "stack": [
+      "Symfony",
+      "Vue.js"
+    ]
+  },
+  {
+    "title": {
+      "en": "PACMAN",
+      "fr": "PACMAN"
+    },
+    "cover": "/img/project-pacman.webp",
+    "description": {
+      "en": "Operational management application for technical intervention teams – statistical KPIs.",
+      "fr": "Application de pilotage d’équipes d’intervention techniques - KPI statistiques."
+    },
+    "stack": [
+      "Symfony",
+      "Vue.js"
+    ]
+  },
+  {
+    "title": {
+      "en": "Agence Saint Germain",
+      "fr": "Agence Saint Germain"
+    },
+    "cover": "/img/project-asg.webp",
+    "description": {
+      "en": "Showcase website for the Paris talent agency Saint Germain.",
+      "fr": "Site vitrine pour l’agence de talents parisienne Saint Germain."
+    },
+    "stack": [
+      "Wordpress"
+    ]
+  },
+  {
+    "title": {
+      "en": "NySB",
+      "fr": "NySB"
+    },
+    "cover": "/img/project-nysb.webp",
+    "description": {
+      "en": "Showcase website for the visual communication agency New York Sous-Bois.",
+      "fr": "Site vitrine pour l’agence de communication visuelle New York Sous-Bois."
+    },
+    "stack": [
+      "Wordpress"
+    ]
+  },
+  {
+    "title": {
+      "en": "Cabinet A. Perney",
+      "fr": "Cabinet A. Perney"
+    },
+    "cover": "/img/project-aperney.webp",
+    "description": {
+      "en": "Showcase website. Project team lead working in collaboration with an Art Director and an editorial team.",
+      "fr": "Site vitrine. Chef d’équipe projet en collaboration avec une DA et une équipe rédactionnelle."
+    },
+    "stack": [
+      "Kirby"
+    ]
+  }
+]

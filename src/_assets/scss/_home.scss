@@ -1,451 +1,94 @@
-@use "sass:color";
-@use "variables";
-
-// Thanks to Jake Jarvis for this codepen: https://codepen.io/jakejarvis/pen/pBZWZw
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  }
-  /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  }
-  /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 .home {
-  .content {
-    text-align: center;
-    font-family: variables.$nunito;
-    font-size: 24px;
-
-    .wave {
-      animation-name: wave-animation;
-      animation-duration: 3s;
-      animation-iteration-count: 1;
-      transform-origin: 70% 70%;
-      display: inline-block;
-    }
-
-    .cta-home {
-      margin-top: 20px;
-    }
-
-    p {
-      margin-bottom: 1rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    a {
-      color: inherit;
-    }
-
-    h1 {
-      font-family: variables.$montserrat;
-      font-size: 50px;
-      color: variables.$blue;
-    }
-
-    img {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      margin-bottom: 40px;
+  h1 {
+    @media screen and (max-width: 960px) {
+      text-align: center;
+      margin-bottom: 20px;
     }
   }
 
   h2 {
-    font-family: variables.$montserrat;
-    text-align: left;
-    font-size: 36px;
-    font-weight: 700;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
 
-  .home-section {
-    font-family: variables.$nunito;
-    font-size: 24px;
-    line-height: 35px;
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px 20px;
-
-    .text-center {
-      text-align: center;
-    }
-
-    .cta {
-      background-color: variables.$blue;
-      color: #fff;
-      text-decoration: none;
-      padding: 15px 40px;
-      font-size: 20px;
-      font-weight: 700;
-      border-radius: 5px;
-      display: inline-block;
-      transition: all 0.2s;
-
-      &.cta-big {
-        font-size: 28px;
-        font-weight: 700;
-        padding: 18px 50px;
-        box-shadow: 0 10px 10px -10px variables.$gray1;
-      }
-
-      &:hover {
-        background-color: color.adjust(variables.$blue, $lightness: 5%, $space: hsl);
-      }
-    }
-
-    &.home-about {
-      text-align: center;
-
-      .frameworks {
-        max-width: 600px;
-        margin: 50px auto 100px;
-        display: flex;
-        justify-content: space-between;
-
-        .framework {
-          width: 100px;
-        }
-      }
-    }
-
-    &.home-projects {
-      max-width: 100%;
-      margin-top: 50px;
-      margin-bottom: 50px;
-      padding-left: 20px;
-      padding-right: 20px;
-
-      h2 {
-        max-width: 1200px;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin: 1rem auto 3rem;
-      }
-
-      .home-projects-container {
-        margin-bottom: 70px;
-
-        .home-project {
-          display: inline-block;
-          width: 300px;
-          margin-right: 20px;
-          flex-shrink: 0;
-          padding-top: 20px;
-
-          a {
-            text-decoration: none;
-            color: inherit;
-          }
-
-          .cover {
-            width: 300px;
-            height: 190px;
-            border-radius: 5px;
-            transition: all 0.2s ease-out;
-            top: 0;
-            right: 0;
-            position: relative;
-          }
-
-          .title {
-            font-family: variables.$montserrat;
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 28px;
-            margin-top: 0;
-            margin-bottom: 0;
-          }
-
-          .work {
-            font-family: variables.$nunito;
-            font-size: 14px;
-            font-weight: 400;
-            color: variables.$gray2;
-            margin-bottom: 0;
-            margin-top: 0;
-            line-height: 1rem;
-          }
-
-          &:hover {
-            .cover {
-              box-shadow: -10px 10px 0 variables.$blue;
-              top: -10px;
-              right: -10px;
-            }
-          }
-
-          @media screen and (max-width: 700px) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            .cover {
-              width: 300px;
-              height: 190px;
-            }
-
-            .title,
-            .work {
-              text-align: center;
-            }
-          }
-        }
-      }
-    }
-
-    &.home-blog {
-      .post {
-        margin-bottom: 1rem;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        .post-title {
-          font-family: variables.$nunito;
-          font-size: 18px;
-          line-height: 24px;
-          margin: 0;
-          padding-left: 15px;
-          position: relative;
-
-          a {
-            text-decoration: none;
-            color: inherit;
-          }
-
-          &:before {
-            display: block;
-            content: '';
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background-color: variables.$blue;
-            position: absolute;
-            left: 0;
-            top: 8px;
-          }
-        }
-
-        .post-date {
-          font-family: variables.$nunito;
-          font-size: 14px;
-          line-height: 1rem;
-          margin: 0;
-          color: variables.$gray2;
-          padding-left: 15px;
-        }
-      }
-
-      .home-blog-more {
-        text-align: right;
-
-        a {
-          color: variables.$blue;
-          font-size: 20px;
-        }
-      }
-    }
-
-    &.home-contact {
-      font-size: 20px;
-    }
-
-    .cta-container {
-      text-align: center;
-    }
+  .section {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
   }
 
-  @media screen and (max-width: 1920px) {
-    h2 {
-      font-size: 34px;
+  .hero {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 960px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-    .content {
-      font-size: 22px;
-
-      img {
-        margin-top: 20px;
-        margin-bottom: 30px;
-      }
-
-      h1 {
-        font-size: 45px;
-        margin-bottom: 3rem;
-      }
-    }
-
-    .home-section {
-      font-size: 22px;
-      line-height: 30px;
-      padding-top: 0;
-
-      &.home-about {
-        .frameworks {
-          max-width: 500px;
-          margin-bottom: 60px;
-
-          .framework {
-            width: 80px;
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    h2 {
-      text-align: center;
-      font-size: 30px;
-    }
-
-    .content {
-      font-size: 20px;
-
-      h1 {
-        font-size: 40px;
-      }
-    }
-
-    .home-section {
-      font-size: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      &.home-about {
-        .frameworks {
-          .framework {
-            width: 80px;
-          }
-        }
-      }
-
-      &.home-blog {
-        .home-blog-more {
-          a {
-            font-size: 18px;
-          }
-        }
-
-        .post {
-          .post-title {
-            font-size: 16px;
-            line-height: 1.2;
-          }
-        }
-      }
-    }
-  }
-}
-
-#heyListen {
-  width: 350px;
-  position: fixed;
-  bottom: -300px;
-  right: 20px;
-  font-size: 0.85rem;
-  z-index: 99;
-  transition: bottom 0.8s cubic-bezier(0.53, -0.13, 0.51, 1.18);
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 10px variables.$gray1;
-
-  &.is-active {
-    bottom: 30px;
-  }
-
-  .card-image {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 120px;
-    position: relative;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-
-    .delete {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      width: 20px;
-      height: 20px;
+    img {
+      display: block;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      background-color: #999;
-      color: white;
-      z-index: 1000;
+      margin-right: 45px;
+
+      @media screen and (max-width: 960px) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      @media screen and (max-width: 960px) {
+        align-items: center;
+        text-align: center;
+      }
+
+      .title {
+        font-size: 24px;
+        margin-bottom: 10px
+      }
+
+      .stack {
+        font-size: 16px;
+        color: var(--text-secondary);
+      }
     }
   }
 
-  .card-content {
-    padding: 1rem;
-
+  .about {
     p {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
 
-      &:last-child {
+      &:last-child,
+      &:last-of-type {
         margin-bottom: 0;
       }
     }
+  }
 
-    a {
-      text-decoration: none;
-      color: variables.$blue;
+  .posts {
+    .blog-link {
+      margin-top: .5rem;
     }
   }
 
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-}
-
-body.dark-mode {
-  .home {
+  .projects {
     .content {
-      .cta-big {
-        box-shadow: 0 10px 10px -10px #111;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 960px) {
+        justify-content: center;
       }
     }
-
-    .home-section {
-      &.home-blog {
-        .post {
-          .post-date {
-            color: variables.$gray2;
-          }
-        }
-      }
-    }
-  }
-
-  #heyListen {
-    background-color: color.adjust(variables.$bgdark, $lightness: -3%, $space: hsl);
-    box-shadow: 0 0 10px #111;
   }
 }

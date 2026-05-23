@@ -4,6 +4,8 @@ import emojifyPlugin from 'eleventy-plugin-emojify';
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import htmlmin from 'html-minifier-next';
 import markdownIt from 'markdown-it';
+import { I18nPlugin } from '@11ty/eleventy';
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/img/');
@@ -11,6 +13,7 @@ export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/css/');
   eleventyConfig.addPassthroughCopy('./src/fonts/');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
+  eleventyConfig.addPassthroughCopy({'./src/img/favicon': '/'});
 
   eleventyConfig.addWatchTarget('./src/_assets/scss');
   eleventyConfig.addWatchTarget('./src/_assets/js');
@@ -19,6 +22,13 @@ export default function(eleventyConfig) {
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(emojifyPlugin);
   eleventyConfig.addPlugin(pluginRss);
+
+  eleventyConfig.addPlugin(I18nPlugin, {
+    defaultLanguage: 'fr',
+    errorMode: 'allow-fallback'
+  });
+
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   // Markdown filter for applying to the "description" inside projects front matter
   const markdownItOptions = {
@@ -65,7 +75,7 @@ export default function(eleventyConfig) {
   // Blogimg shortcode for... well, blog images
   eleventyConfig.addShortcode('blogimg', (date, src, alt = 'Image') => {
     if (date && src) {
-      let str = `<div class="is-blog-img"><img src="/img/blog/${date}/${src}" alt="${alt}">`;
+      let str = `<div class="is-blog-img"><img src="/img/blog/${date}/${src}" alt="${alt}" width="720">`;
 
       if (alt !== 'Image') {
         str += `<p class="is-blog-img-title">${alt}</p>`;
@@ -97,8 +107,7 @@ export default function(eleventyConfig) {
     templateFormats: ['md', 'njk', 'html', '11ty.js'],
     dir: {
       input: 'src',
-      output: 'dist',
-      layouts: '_layouts'
+      output: 'dist'
     }
   };
 };

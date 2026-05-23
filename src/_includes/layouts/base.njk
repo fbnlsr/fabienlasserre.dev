@@ -1,0 +1,118 @@
+{% set metaTitle = site[page.lang].metaTitle %}
+{% set metaDescription = site[page.lang].metaDescription %}
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+    <!-- General meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%- if metaDesc -%}
+        {%- set metaDescription = metaDesc -%}
+    {%- else -%}
+        {%- if title -%}
+            {%- set metaDescription = title + " | " + i18n[page.lang]['sitename'] -%}
+        {%- else -%}
+            {%- set metaDescription = i18n[page.lang]['sitename'] -%}
+        {%- endif -%}
+    {%- endif -%}
+    <meta name="description" content="{{ metaDescription }}" />
+    <meta name="author" content="Fabien Lasserre" />
+    <meta name="robots" content="index,follow" />
+
+    <title>
+        {%- if title -%}
+            {{ title | escape }} | {{ i18n[page.lang]['sitename'] }}
+        {%- else -%}
+            {{ i18n[page.lang]['sitename'] }}
+        {%- endif -%}
+    </title>
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
+
+    <!-- Blog feed -->
+    <link href="/{{ locale }}/blog/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.title }}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Fabien Lasserre" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@fbnlsr" />
+    <meta name="twitter:creator" content="@fbnlsr" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:title"
+          content="{%- if title -%}{{ title | escape }} | {{ i18n[page.lang]['sitename'] }}{%- else -%}{{ i18n[page.lang]['sitename'] }}{%- endif -%}" />
+    <meta property="og:description"
+          content="{%- if excerpt -%}{{ excerpt | escape }} | {{ i18n[page.lang]['sitename'] }}{%- else -%}{{ i18n[page.lang]['sitename'] }}{%- endif -%}" />
+    <meta property="og:site_name" content="{{ i18n[page.lang]['sitename'] }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url + page.url }}" />
+    <meta property="og:image" content="{{ site.url }}/img/og.png" />
+    {% if page.lang == 'fr' -%}
+        <meta property="og:locale" content="fr_FR" />
+    {%- else -%}
+        <meta property="og:locale" content="en_US" />
+    {%- endif %}
+
+    <!-- Theme -->
+    <script>
+      const saved = localStorage.getItem('mode');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (systemDark ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    </script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" media="all" href="{{ "/css/main.min.css" | url }}">
+</head>
+<body class="{% if layout_size == "large" -%}is-large{%- endif -%}">
+
+{% include "components/nav.njk" %}
+
+<div class="site" id="top">
+    <div class="site-content">
+        {{ content | safe }}
+    </div>
+
+    {% include "components/footer.njk" %}
+</div>
+
+<div class="go-to-top is-hidden-mobile" id="topArrow">
+    <a href="#top" aria-label="Go to top">
+        <svg viewBox="0 0 24 24">
+            <path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
+        </svg>
+    </a>
+</div>
+
+
+<!-- Cloudflare Web Analytics -->
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "f5698ab0bfb64e2c9015cfdc78ed4349"}'></script>
+<!-- End Cloudflare Web Analytics -->
+
+<script src="//unpkg.com/alpinejs" defer></script>
+<script type="module" src="{{ "/js/main.js" | url }}" defer></script>
+<script src="//instant.page/5.2.0" type="module"
+        integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+</body>
+</html>

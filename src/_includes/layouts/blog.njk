@@ -1,0 +1,17 @@
+---
+layout: "layouts/base.njk"
+---
+<div class="inner-page">
+    <h1>{{ i18n[locale]['blog'] }}</h1>
+
+    <div class="blog-list is-clearfix">
+        {%- for post in collections["posts_" + locale] | reverse -%}
+            {% if post.data.draft != true %}
+                {% set date = post.date %}
+                {% set link = post.url %}
+                {% set title = post.data.title %}
+                {% include "components/blogpost_item.njk" %}
+            {% endif %}
+        {%- endfor -%}
+    </div>
+</div>

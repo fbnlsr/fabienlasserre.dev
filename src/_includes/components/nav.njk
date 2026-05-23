@@ -1,0 +1,56 @@
+<nav class="nav-container" aria-label="main navigation">
+    <div class="content">
+        <div>
+            <a href="{{ "/" | locale_url }}"
+               class="{% if page.url == '/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].home }}</a>
+            <a href="{{ "/blog/" | locale_url }}"
+               class="{% if category == 'blog' %}is-bold{% endif %}">{{ i18n[page.lang].blog }}</a>
+            <a href="{{ "/contact/" | locale_url }}"
+               class="{% if page.url == '/contact/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].contact }}</a>
+        </div>
+
+        <div class="right">
+            {% for link in page.url | locale_links %}
+                <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
+                    {{ link.label }}
+                </a>
+            {% endfor %}
+            <img class="is-mode-switcher" src="/img/sun.svg" alt="Change theme" eleventy:ignore />
+        </div>
+    </div>
+</nav>
+
+<div x-data="{ open: false }" class="navbar-mobile-container">
+    <div class="mode-switch">
+        <img class="is-mode-switcher" src="/img/sun.svg" alt="Change theme" eleventy:ignore />
+    </div>
+    <div class="navbar-burger">
+        <svg id="menu" aria-label="Burger" x-show="!open" @click="open = !open" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg id="x" aria-label="Burger" x-show="open" @click="open = !open" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </div>
+    <div class="nav-mobile-content" x-show="open">
+        <a class="link-accent" href="{{ "/" | locale_url }}"
+           class="{% if page.url == '/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].home }}</a>
+        <a class="link-accent" href="{{ "/blog/" | locale_url }}"
+           class="{% if category == 'blog' %}is-bold{% endif %}">{{ i18n[page.lang].blog }}</a>
+        <a class="link-accent" href="{{ "/contact/" | locale_url }}"
+           class="{% if page.url == '/contact/' | locale_url %}is-bold{% endif %}">{{ i18n[page.lang].contact }}</a>
+        <hr />
+        {% for link in page.url | locale_links %}
+            <a class="link-accent" href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
+                {{ link.label }}
+            </a>
+        {% endfor %}
+    </div>
+</div>

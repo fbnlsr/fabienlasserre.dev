@@ -1,103 +1,31 @@
-@use "sass:color";
-@use "variables";
-
-.footer-logo {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 100px;
-
-  img {
-    width: 100px;
-  }
-}
-
 .site-footer {
-  background-color: variables.$footerbg;
-  border-top: 1px solid variables.$gray1;
-  padding: 1rem 3rem;
-  font-size: 0.8rem;
-  color: variables.$gray2;
+  margin-top: 100px;
   height: 70px;
+  background-color: var(--bg2);
+  border-top: 1px solid color-mix(in srgb, var(--text) 20%, transparent);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 
-  .left-side,
-  .right-side {
-    flex-shrink: 0;
-    display: flex;
-  }
+  .footer-content {
+    max-width: 960px;
+    width: 100%;
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    color: var(--text-secondary);
 
-  .contact {
-    margin-right: 2rem;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-    margin-right: 0.7rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-
-  .lang {
-    text-transform: uppercase;
-    color: inherit;
-    font-weight: bold;
-
-    &.is-active {
-      border-bottom: 1px solid variables.$gray2;
-    }
-  }
-
-  .right-side {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 140px;
-
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: initial;
-    position: relative;
-
-    .left-side {
-      flex-direction: column;
+    @media screen and (max-width: 960px) {
+      padding: 0 20px;
     }
 
-    .contact {
-      margin-bottom: 1rem;
-      margin-right: 0;
-    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      border: none;
 
-    .right-side {
-      text-align: center;
-      font-size: 1.15rem;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-  }
-}
-
-body.dark-mode {
-  .site-footer {
-    background-color: color.adjust(variables.$bgdark, $lightness: -3%, $space: hsl);
-    border-top: 1px solid variables.$gray2;
-    color: variables.$textdark;
   }
 }

@@ -1,11 +1,9 @@
 ---
-layout: 'page.njk'
-permalink: '/fr/mentions-legales/'
+layout: "layouts/base.njk"
 metaDesc: "Mentions légales."
 ---
-# Mentions légales
 
-<div class="white-container">
+# Mentions légales
 
 ## Identification
 
@@ -25,10 +23,6 @@ Fabien Lasserre
 
 E-mail : hello@fabienlasserre.dev
 
-</div>
-
-<div class="white-container">
-
 ## Hébergement
 
 Directeur de la publication : Fabien Lasserre.
@@ -39,35 +33,28 @@ Netlify, Inc.
 512 2nd Street, Suite 200
 San Francisco, CA 94107
 
-</div>
-
-<div class="white-container">
-
 ## Données personnelles
 
-Les informations recueillies sur le formulaire de contact sont enregistrées dans un fichier informatisé par Netlify, Inc. pour les envoyer par e-mail à Fabien Lasserre pour la mise en relation entre ce dernier et l'utilisateur.
+Les informations recueillies sur le formulaire de contact sont enregistrées dans un fichier informatisé par Netlify,
+Inc. pour les envoyer par e-mail à Fabien Lasserre pour la mise en relation entre ce dernier et l'utilisateur.
 
 Les données collectées sont communiquées aux seuls destinataires suivants : Netlify, Inc., Fabien Lasserre.
 
-Vous pouvez accéder aux données vous concernant, les rectifier, demander leur effacement ou exercer votre droit à la limitation du traitement de vos données.
+Vous pouvez accéder aux données vous concernant, les rectifier, demander leur effacement ou exercer votre droit à la
+limitation du traitement de vos données.
 
 Consultez le site cnil.fr pour plus d’informations sur vos droits.
 
-Pour exercer ces droits ou pour toute question sur le traitement de vos données dans ce dispositif, vous pouvez contacter Fabien Lasserre directement par e-mail hello@fabienlasserre.dev.
+Pour exercer ces droits ou pour toute question sur le traitement de vos données dans ce dispositif, vous pouvez
+contacter Fabien Lasserre directement par e-mail hello@fabienlasserre.dev.
 
-Si vous estimez, après nous avoir contactés, que vos droits « Informatique et Libertés » ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL.
-
-</div>
-
-<div class="white-container">
+Si vous estimez, après nous avoir contactés, que vos droits « Informatique et Libertés » ne sont pas respectés, vous
+pouvez adresser une réclamation à la CNIL.
 
 ## Cookies
 
-Ce site internet ne stocke aucun cookie sur votre navigateur. Le site respecte votre vie privée : aucune mesure d'audience ou de fréquentation n'est effectuée par l'intermédiaire de cookies.
-
-</div>
-
-<div class="white-container">
+Ce site internet ne stocke aucun cookie sur votre navigateur. Le site respecte votre vie privée : aucune mesure
+d'audience ou de fréquentation n'est effectuée par l'intermédiaire de cookies.
 
 ## Propriété intellectuelle
 
@@ -76,7 +63,3 @@ Le design, le logo et le contenu rédactionnel de ce site internet est l'entièr
 Les illustrations et pictogrammes de la page « À propos » sont fournis par https://www.freepik.com
 
 Les icônes de soleil/lune sont fournies par [Jaime Aleman](https://github.com/jjaimealeman/my-theme-switcher).
-
-Les photos sur la page 404 sont la propriété de [Daniel Jensen](https://unsplash.com/photos/persons-hand-over-brown-floral-field-during-daytime-UDleHDOhBZ8) et [Rahul Bhosale](https://unsplash.com/photos/man-standing-beside-camping-tent-wearing-headlamp-during-nighttime-yBgC-qVCxMg).
-
-</div>

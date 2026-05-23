@@ -1,125 +1,64 @@
-@use "sass:color";
-@use "variables";
-
-.contact-text {
-  margin-bottom: 2rem;
-
-  p {
-    margin-top: 0;
-    margin-bottom: 0.4rem;
-    text-align: center;
-
-    a,
-    a:visited,
-    a:active {
-      color: variables.$blue;
-      text-decoration: underline;
-    }
-  }
-}
-
 .contact-container {
-  max-width: 900px;
-  margin: auto;
+  background-color: var(--bg2);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+  border: 1px solid color-mix(in srgb, var(--text) 20%, transparent);
 
   .form-item {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    font-family: variables.$nunito;
-    margin-bottom: 1rem;
-
-    &.hidden {
-      display: none;
-    }
-
-    &.form-item-checkbox {
-      flex-direction: row;
-
-      label {
-        margin-left: 0.7rem;
-      }
-    }
+    margin-bottom: 20px;
+    justify-content: start;
 
     &:last-child {
       margin-bottom: 0;
     }
 
-    a {
-      color: inherit;
-      text-decoration: underline;
+    &.form-item-btn {
+      align-items: start;
+      flex-grow: 0;
+    }
+
+    &.form-item-checkbox {
+      flex-direction: row;
+      align-items: start;
+
+      label {
+        font-weight: normal;
+      }
+
+      input {
+        margin-right: 10px;
+        margin-top: 10px;
+      }
+    }
+
+    &.hidden {
+      display: none;
     }
 
     label {
-      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 5px;
     }
 
     input,
     textarea {
-      font-family: variables.$nunito;
-      font-size: 16px;
-      border: 1px solid variables.$gray1;
-      border-radius: 5px;
       padding: 10px;
+      border-radius: 5px;
+      border: 0;
+      font-size: 18px;
+      color: var(--bg);
     }
 
-    input[type='submit'] {
-      display: inline-block;
-      background-color: variables.$blue;
-      color: white;
-      align-self: flex-start;
-      font-size: 20px;
-      font-weight: 700;
-      padding: 8px 40px;
-      border: none;
+    .btn {
+      padding: 10px 20px;
+      font-size: 18px;
 
-      &:hover {
-        background-color: color.adjust(variables.$blue, $lightness: 10%, $space: hsl);
-      }
-    }
-  }
-}
-
-.contact-page-container {
-  font-family: variables.$nunito;
-  font-size: 20px;
-  max-width: 1000px;
-  margin: auto;
-  line-height: 28px;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  .contact-text {
-    text-align: center;
-
-    p {
-      margin-bottom: 1rem;
-
-      &:last-child {
-        margin-bottom: 50px;
-      }
-    }
-  }
-}
-
-body.dark-mode {
-  .contact-container {
-    .form-item {
-      input,
-      textarea {
-        border-color: variables.$bgdark2;
-        background-color: color.adjust(variables.$bgdark2, $lightness: -10%, $space: hsl);
-        color: variables.$background;
-      }
-
-      input[type='submit'] {
-        background-color: variables.$blue;
-        color: white;
-
-        &:hover {
-          cursor: pointer;
-          background-color: color.adjust(variables.$blue, $lightness: 10%, $space: hsl);
-        }
+      input {
+        padding: initial;
+        font-weight: normal;
       }
     }
   }
