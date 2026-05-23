@@ -86,9 +86,15 @@ body {
 
 
   .site-content {
-    max-width: 720px;
+    width: 100%;
+    max-width: 960px;
     margin: auto;
     flex-grow: 1;
+
+    .inner-page {
+      max-width: 720px;
+      margin: auto;
+    }
 
     @media screen and (max-width: 960px) {
       padding: 0 20px;

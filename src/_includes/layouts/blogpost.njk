@@ -1,36 +1,38 @@
 ---
 layout: "layouts/base.njk"
 ---
-<div class="blogpost">
-    <div class="header">
-        <h1>{{ title }}</h1>
+<div class="inner-page">
+    <div class="blogpost">
+        <div class="header">
+            <h1>{{ title }}</h1>
 
-        <p class="date">
-            {% humandate date,
-                locale %} • {{ content | readingTime }}.
-        </p>
+            <p class="date">
+                {% humandate date,
+                    locale %} • {{ content | readingTime }}.
+            </p>
 
-        <a class="backlink" href="{{ "/blog/" | locale_url }}">{{ i18n[locale]['backToBlog'] }}</a>
-    </div>
+            <a class="backlink" href="{{ "/blog/" | locale_url }}">{{ i18n[locale]['backToBlog'] }}</a>
+        </div>
 
-    <article>
-        {% if hasCover %}
-            {% set postDate = date | dateToRfc3339 %}
-            <div class="cover">
-                <img src="/img/blog/{{ postDate.slice(0,10) }}/cover.webp" alt="Post cover" width="720" />
+        <article>
+            {% if hasCover %}
+                {% set postDate = date | dateToRfc3339 %}
+                <div class="cover">
+                    <img src="/img/blog/{{ postDate.slice(0,10) }}/cover.webp" alt="Post cover" width="720" />
+                </div>
+            {% endif %}
+            {{ content | emojify | safe }}
+        </article>
+
+        {% if cover %}
+            <hr />
+            <div class="credits">
+                {% if cover.link %}
+                    {{ i18n[locale]["coverCredits"] }} <a href="{{ cover.link }}" target="_blank">{{ cover.author }}</a>.
+                {% else %}
+                    {{ i18n[locale]["coverCredits"] }} {{ cover.author }}.
+                {% endif %}
             </div>
         {% endif %}
-        {{ content | emojify | safe }}
-    </article>
-
-    {% if cover %}
-        <hr />
-        <div class="credits">
-            {% if cover.link %}
-                {{ i18n[locale]["coverCredits"] }} <a href="{{ cover.link }}" target="_blank">{{ cover.author }}</a>.
-            {% else %}
-                {{ i18n[locale]["coverCredits"] }} {{ cover.author }}.
-            {% endif %}
-        </div>
-    {% endif %}
+    </div>
 </div>
