@@ -1,6 +1,8 @@
 ---
 layout: "layouts/base.njk"
 ---
-{{ content | safe }}
+<div class="inner-page">
+    {{ content | safe }}
 
-{% include 'components/contactform.njk' %}
+    {% include 'components/contactform.njk' %}
+</div>
