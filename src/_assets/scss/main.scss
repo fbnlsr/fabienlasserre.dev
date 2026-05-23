@@ -20,11 +20,11 @@
 
 :root[data-theme="light"] {
   --bg: #F3F2F7;
-  --bg2: #e5e7ef;
+  --bg2: #F2F4F8;
   --bg-tags: #FCFBFE;
   --text: #22212B;
   --text-secondary: #545360;
-  --accent: #F5A52EFF;
+  --accent: #F49910;
   --nav-border: rgba(34, 33, 43, .2);
 }
 
@@ -85,7 +85,7 @@ body {
   width: 100%;
 
 
-  .content {
+  .site-content {
     max-width: 720px;
     margin: auto;
     flex-grow: 1;
@@ -193,8 +193,8 @@ hr {
 .go-to-top {
   transition: all 0.25s ease-out;
   position: fixed;
-  bottom: 60px;
-  right: 50px;
+  bottom: 0;
+  right: 30px;
   background-color: var(--accent);
   color: var(--bg2);
   width: 30px;

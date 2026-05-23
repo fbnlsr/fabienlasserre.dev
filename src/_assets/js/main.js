@@ -21,10 +21,10 @@ const displayTopArrow = (el, scrollPos) => {
   const arrow = el;
   if (scrollPos > 100) {
     arrow.style.opacity = .9;
-    arrow.style.bottom = '80px';
+    arrow.style.bottom = '30px';
   } else {
     arrow.style.opacity = 0;
-    arrow.style.bottom = '60px';
+    arrow.style.bottom = '40px';
   }
 };
 window.addEventListener('scroll', () => {
