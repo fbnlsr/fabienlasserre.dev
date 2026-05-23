@@ -1,8 +1,9 @@
 .contact-container {
   background-color: var(--bg2);
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 40px;
+  border: 1px solid color-mix(in srgb, var(--text) 20%, transparent);
 
   .form-item {
     display: flex;
