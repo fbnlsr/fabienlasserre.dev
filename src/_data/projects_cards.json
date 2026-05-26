@@ -6,17 +6,15 @@
     },
     "cover": "/img/project-vasco.webp",
     "description": {
-      "en": "Management solution for unlisted vehicles. KYC, AML, deals & funds handling.",
-      "fr": "Solution de gestion pour véhicules non-côtés. Gestion KYC, LCB-FT, deals & funds."
+      "en": "Fintech startup building a management solution for unlisted vehicles. KYC, AML rules, deals & funds handling.",
+      "fr": "Startup fintech produisant une solution de gestion pour véhicules non-côtés. Gestion KYC, règles LCB-FT, deals & funds."
     },
     "stack": [
       "Symfony",
       "Vue.js",
-      "GraphQL",
-      "PHP Stan",
-      "Behat",
-      "GCP"
-    ]
+      "GraphQL"
+    ],
+    "link": "https://vasco.fund"
   },
   {
     "title": {
@@ -25,13 +23,15 @@
     },
     "cover": "/img/project-exeve.webp",
     "description": {
-      "en": "Inventory management and auction sales application for auctioneers.",
-      "fr": "Application de gestion d’inventaires et de vente aux enchères pour les commissaires-priseurs."
+      "en": "Inventory management platform for auctioneers. Real-time auction sales and billing generation.",
+      "fr": "Plateforme de gestion d'inventaires pour Commissaires de Justice. Système de vente aux enchères en temps-réel et génération de factures."
     },
     "stack": [
       "Symfony",
-      "Vue.js"
-    ]
+      "Vue.js",
+      "ElementUI"
+    ],
+    "link": "https://www.exeve.fr/"
   },
   {
     "title": {
@@ -45,7 +45,8 @@
     },
     "stack": [
       "Symfony",
-      "Vue.js"
+      "Vue.js",
+      "REST"
     ]
   },
   {
@@ -60,7 +61,8 @@
     },
     "stack": [
       "Symfony",
-      "Vue.js"
+      "Vue.js",
+      "OSM"
     ]
   },
   {

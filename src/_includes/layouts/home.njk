@@ -49,7 +49,8 @@ layout_size: "large"
                     cover: project.cover,
                     title: project.title[locale],
                     description: project.description[locale],
-                    stack: project.stack
+                    stack: project.stack,
+                    link: project.link
                 } %}
                 {% include "components/project_card.njk" %}
             {% endfor %}

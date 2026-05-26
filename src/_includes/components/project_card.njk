@@ -1,5 +1,12 @@
 <div class="project-card">
     <div class="cover">
+        {% if item.link %}
+        <div class="project-link">
+            <a href="{{ item.link }}" target="_blank">
+                <span class="project-link-icon" aria-hidden="true"></span>{{ i18n[locale]['viewProject'] }}
+            </a>
+        </div>
+        {% endif %}
         <img src="{{ item.cover }}" alt="Project cover" />
     </div>
     <div class="card-content">

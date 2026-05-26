@@ -23,7 +23,8 @@
     "contactMeCTA": "Me contacter",
     "yummyField": "Ne remplissez PAS ce champ :",
     "legal": "Mentions légales",
-    "coverCredits": "Crédits de couverture :"
+    "coverCredits": "Crédits de couverture :",
+    "viewProject": "Voir projet"
   },
   "en": {
     "sitename": "Fabien Lasserre",
@@ -49,6 +50,7 @@
     "contactMeCTA": "Get in touch",
     "yummyField": "Do NOT fill this field:",
     "legal": "Legal",
-    "coverCredits": "Cover credits:"
+    "coverCredits": "Cover credits:",
+    "viewProject": "View project"
   }
 }
