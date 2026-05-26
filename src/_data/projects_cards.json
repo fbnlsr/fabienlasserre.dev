@@ -1,18 +1,37 @@
 [
   {
     "title": {
+      "en": "Vasco",
+      "fr": "Vasco"
+    },
+    "cover": "/img/project-vasco.webp",
+    "description": {
+      "en": "Fintech startup building a management solution for unlisted vehicles. KYC, AML rules, deals & funds handling.",
+      "fr": "Startup fintech produisant une solution de gestion pour véhicules non-côtés. Gestion KYC, règles LCB-FT, deals & funds."
+    },
+    "stack": [
+      "Symfony",
+      "Vue.js",
+      "GraphQL"
+    ],
+    "link": "https://vasco.fund"
+  },
+  {
+    "title": {
       "en": "Exeve",
       "fr": "Exeve"
     },
     "cover": "/img/project-exeve.webp",
     "description": {
-      "en": "Inventory management and auction sales application for auctioneers.",
-      "fr": "Application de gestion d’inventaires et de vente aux enchères pour les commissaires-priseurs."
+      "en": "Inventory management platform for auctioneers. Real-time auction sales and billing generation.",
+      "fr": "Plateforme de gestion d'inventaires pour Commissaires de Justice. Système de vente aux enchères en temps-réel et génération de factures."
     },
     "stack": [
       "Symfony",
-      "Vue.js"
-    ]
+      "Vue.js",
+      "ElementUI"
+    ],
+    "link": "https://www.exeve.fr/"
   },
   {
     "title": {
@@ -26,7 +45,8 @@
     },
     "stack": [
       "Symfony",
-      "Vue.js"
+      "Vue.js",
+      "REST"
     ]
   },
   {
@@ -41,7 +61,8 @@
     },
     "stack": [
       "Symfony",
-      "Vue.js"
+      "Vue.js",
+      "OSM"
     ]
   },
   {
@@ -53,20 +74,6 @@
     "description": {
       "en": "Showcase website for the Paris talent agency Saint Germain.",
       "fr": "Site vitrine pour l’agence de talents parisienne Saint Germain."
-    },
-    "stack": [
-      "Wordpress"
-    ]
-  },
-  {
-    "title": {
-      "en": "NySB",
-      "fr": "NySB"
-    },
-    "cover": "/img/project-nysb.webp",
-    "description": {
-      "en": "Showcase website for the visual communication agency New York Sous-Bois.",
-      "fr": "Site vitrine pour l’agence de communication visuelle New York Sous-Bois."
     },
     "stack": [
       "Wordpress"
