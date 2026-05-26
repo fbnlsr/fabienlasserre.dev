@@ -1,6 +1,25 @@
 [
   {
     "title": {
+      "en": "Vasco",
+      "fr": "Vasco"
+    },
+    "cover": "/img/project-vasco.webp",
+    "description": {
+      "en": "Management solution for unlisted vehicles. KYC, AML, deals & funds handling.",
+      "fr": "Solution de gestion pour véhicules non-côtés. Gestion KYC, LCB-FT, deals & funds."
+    },
+    "stack": [
+      "Symfony",
+      "Vue.js",
+      "GraphQL",
+      "PHP Stan",
+      "Behat",
+      "GCP"
+    ]
+  },
+  {
+    "title": {
       "en": "Exeve",
       "fr": "Exeve"
     },
@@ -53,20 +72,6 @@
     "description": {
       "en": "Showcase website for the Paris talent agency Saint Germain.",
       "fr": "Site vitrine pour l’agence de talents parisienne Saint Germain."
-    },
-    "stack": [
-      "Wordpress"
-    ]
-  },
-  {
-    "title": {
-      "en": "NySB",
-      "fr": "NySB"
-    },
-    "cover": "/img/project-nysb.webp",
-    "description": {
-      "en": "Showcase website for the visual communication agency New York Sous-Bois.",
-      "fr": "Site vitrine pour l’agence de communication visuelle New York Sous-Bois."
     },
     "stack": [
       "Wordpress"
