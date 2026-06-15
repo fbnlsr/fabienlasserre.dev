@@ -92,13 +92,12 @@
       }
     }
 
-    ul {
-      margin-left: 1rem;
-      list-style-position: inside;
+    ul, ol {
+      margin-left: 0.5rem;
       margin-bottom: 1.5rem;
 
       li {
-        margin-bottom: 0.2rem;
+        margin-bottom: .75rem;
 
         &::marker {
           color: var(--accent);

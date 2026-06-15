@@ -23,15 +23,16 @@
       color: var(--accent);
       text-decoration: none;
       margin-right: 20px;
-      border: none;
+      border-bottom: 1px solid transparent;
 
       &:hover {
         border-bottom: 1px solid var(--accent);
+        text-decoration: none;
       }
 
     }
 
-    .right {
+    div {
       display: flex;
       align-items: center;
 

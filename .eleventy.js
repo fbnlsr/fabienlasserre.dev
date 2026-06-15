@@ -28,7 +28,30 @@ export default function(eleventyConfig) {
     errorMode: 'allow-fallback'
   });
 
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["avif", "webp", "jpeg"],
+    widths: ["auto"],
+
+    sharpAvifOptions: {
+      quality: 100,
+      effort: 9,
+    },
+
+    sharpWebpOptions: {
+      quality: 100,
+      effort: 6,
+    },
+
+    sharpJpegOptions: {
+      quality: 100,
+      mozjpeg: true,
+    },
+
+    sharpPngOptions: {
+      quality: 100,
+      compressionLevel: 9,
+    },
+  });
 
   // Markdown filter for applying to the "description" inside projects front matter
   const markdownItOptions = {
