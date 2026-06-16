@@ -57,7 +57,7 @@ export default function(eleventyConfig) {
   const markdownItOptions = {
     html: true,
     breaks: true,
-    linkify: true
+    linkify: false
   };
   const md = markdownIt(markdownItOptions);
   eleventyConfig.setLibrary('md', md);
