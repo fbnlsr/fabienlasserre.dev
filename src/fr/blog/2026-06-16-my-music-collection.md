@@ -70,6 +70,8 @@ C'est une base de données qui permet de comparer des signatures numériques et 
 
 Un fichier `cover.jpg` qui contient la pochette de l'album en haute résolution, et optionnellement un fichier `.cue` dans le cas où je souhaite graver un CD correspondant bit pour bit à l'original, et un fichier `.log` qui contient des informations sur le rip.
 
+{% blogimg date | blogdate, "freac.jpg", "Fre:ac en pleine action." %}
+
 ### Cover Search Engine
 
 Pour récupérer des images de couverture en grand format, j'utilise [Cover Search Engine](https://covers.musichoarders.xyz/), un outil créé, il me semble, par des Redditeur de [/r/musichoarder](https://old.reddit.com/r/musichoarder/), une communauté de passionnés dont le passe-temps favori est d'accumuler et stocker un maximum de musique.
@@ -153,6 +155,8 @@ Pour décrire ce que fait ce script :
 - L'année de l'album est en premier avant le nom, entre crochets,
 - Les pistes sont nommées avec leur numéro suivi du titre.
 
+{% blogimg date | blogdate, "picard.jpg", "Après le rip, Picard range les fichiers et applique les bons tags." %}
+
 ## Plan d'action
 
 La théorie est en place et les règles sont définies, il est temps de passer à l'action.
@@ -183,6 +187,8 @@ J'ai donc pris la décision de louer un serveur et installer dessus [**Navidrome
 Sur mes ordinateurs, je suis donc passé de [**Lolypop**](https://wiki.gnome.org/Apps/Lollypop) à [**Feishin**](https://github.com/jeffvli/feishin), un client Open Source qui me permet de me connecter directement à mon serveur Navidrome.
 
 Enfin, sur mon téléphone Android, j'ai acheté [**Symfonium**](https://www.symfonium.app/). Compatible Android Auto, supportant le gapless playback, cette application est tout simplement incroyable de fonctionnalité et de praticité.
+
+{% blogimg date | blogdate, "feishin.jpg", "Feishin, mon client Navidrome." %}
 
 ## Last.fm
 

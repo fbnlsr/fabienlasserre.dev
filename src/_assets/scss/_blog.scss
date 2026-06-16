@@ -120,6 +120,11 @@
     .is-blog-img {
       text-align: center;
       margin-top: 1.5rem;
+
+      & a, & a:visited, & a:hover {
+        text-decoration: none;
+        border: none;
+      }
     }
 
     .is-blog-img-title {

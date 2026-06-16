@@ -100,8 +100,9 @@ export default function(eleventyConfig) {
     if (date && src) {
       const renderedAlt = md.renderInline(alt);
       const plainAlt = renderedAlt.replace(/<[^>]*>/g, '');
+      const imageSrc = `/img/blog/${date}/${src}`;
 
-      let str = `<div class="is-blog-img"><img src="/img/blog/${date}/${src}" alt="${plainAlt}" width="720">`;
+      let str = `<div class="is-blog-img"><a href="${imageSrc}" target="_blank" rel="noopener noreferrer"><img src="${imageSrc}" alt="${plainAlt}" width="720"></a>`;
 
       if (alt !== 'Image') {
         str += `<p class="is-blog-img-title">${renderedAlt}</p>`;
