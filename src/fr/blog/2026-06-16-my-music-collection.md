@@ -17,7 +17,7 @@ Dans cet article, je fais un petit état des lieux de la situation actuelle, et 
 
 Comme je le disais, la musique m'a toujours accompagné. En réalité, je pourrais dire sans exagérer que ma vie a littéralement changé pour toujours il y a un peu plus de 25 ans, lorsque j'ai écouté les premières notes de l'album *Tri Repetae* du groupe **Autechre**.
 
-Je me souviens de ce jour comme si c'était hier : nous étions en ballade à la FNAC avec mon ami Louis, comme nous le faisions souvent le samedi. C'était l'époque où le CD régnait en maître absolu sur les ventes musicales. Sur les étals, la cassette était morte depuis un moment, et le vinyle était un peu considéré comme un média pauvre et peu pratique, réservé aux DJs et à nos parents.
+Je me souviens de ce jour comme si c'était hier : nous étions en balade à la FNAC avec mon ami Louis, comme nous le faisions souvent le samedi. C'était l'époque où le CD régnait en maître absolu sur les ventes musicales. Sur les étals, la cassette était morte depuis un moment, et le vinyle était un peu considéré comme un média pauvre et peu pratique, réservé aux DJs et à nos parents.
 
 C'était aussi l'époque où pour écouter un album avant de l'acheter, il fallait se rendre dans un endroit très spécial situé en plein milieu du magasin. Là, trônaient des colonnes noires, avec sur leur façade un simple affichage LCD à 8 segments, et des boutons. Il fallait alors donner le précieux objet à un employé dont l'occupation principale était d'ouvrir la boîte cristal, sortir la galette de plastique pour la mettre dans une platine, et nous donner un numéro correspondant à la borne qui nous était désignée. Et nous étions là, une dizaine d'inconnus, debout face à ces monolithes de plastique, chacun dans sa bulle.
 
@@ -33,9 +33,9 @@ Au fil des ans, je me suis mis comme beaucoup à consommer la musique autrement.
 
 Et depuis quelques années, je consomme comme beaucoup la majorité de ma musique via Spotify. Du jour au lendemain, le besoin de posséder une collection de CDs devenait caduque. Le fait de pouvoir avoir toutes ses playlists et ses albums dans la poche, le tout synchronisé avec son ordinateur de bureau et portable instantanément, est aussi un argument très fort. Et que d'économies ! Payer 15 €, le prix d'un seul CD, pour avoir à disposition un catalogue de plusieurs millions de titres ? C'est donné !
 
-Seulement voilà, suivant le principe de [Merdification](https://fr.wikipedia.org/wiki/Merdification), la qualité de service de Spotify n'a cessé de se dégrader au fil des ans. Je passerai sur son UX désastreuse qui empire à chaque mise à jour, cela pourrait être le sujet d'un article dédié. Je ne m'étalerai pas non plus sur la qualité de streaming qui est soit-disant en deçà de la concurrence : Spotify permet une écoute en 320 kbps, et soyons honnêtes, rares sont ceux qui pourraient faire la différence entre ce bitrate et un support original, surtout si c'est pour écouter sa musique en voiture ou en faisant du sport.
+Seulement voilà, suivant le principe de [Merdification](https://fr.wikipedia.org/wiki/Merdification), la qualité de service de Spotify n'a cessé de se dégrader au fil des ans. Je passerai sur son UX désastreuse qui empire à chaque mise à jour, cela pourrait être le sujet d'un article dédié. Je ne m'étalerai pas non plus sur la qualité de streaming qui est soi-disant en deçà de la concurrence : Spotify permet une écoute en 320 kbps, et soyons honnêtes, rares sont ceux qui pourraient faire la différence entre ce bitrate et un support original, surtout si c'est pour écouter sa musique en voiture ou en faisant du sport.
 
-Ce qui me frustre au plus haut point, c'est de voir des morceaux soudainement disparaître au milieu d'albums que j'ai l'habitude d'écouter, ou encore de ne simplement plus avoir le droit de streamer certains albums, pour d'obscurs problèmes de droit d'auteur. Et étant un grand amateur de Rap, j'avoue ne pas être fan de devoir faire avec les versions édulcorées et censurées de mes morceaux favoris. Et puis tout n'est pas disponible. Certaines anciennes sorties, un peu obscures, ou des albums édités par des labels indépendants ne se trouvent tout simplement pas sur Spotify. Et puis il y a l'explosion de la musique générée par IA, les algorithmes de découverte qui sont totalement biaisés. Bref, rester maître de ce que l'on aime devient de plus en plus difficile, et s'ensuit un appauvrissement de la qualité générale de ce que l'on consomme.
+Ce qui me frustre au plus haut point, c'est de voir des morceaux soudainement disparaître au milieu d'albums que j'ai l'habitude d'écouter, ou encore de ne simplement plus avoir le droit de streamer certains albums pour d'obscurs problèmes de droit d'auteur. Et étant un grand amateur de Rap, j'avoue ne pas être fan de devoir faire avec les versions édulcorées et censurées de mes morceaux favoris. Et puis tout n'est pas disponible : certaines anciennes sorties, un peu obscures, ou des albums édités par des labels indépendants ne se trouvent tout simplement pas sur Spotify. Plus récemment, il y a l'explosion de la musique générée par IA ou encore les algorithmes de découverte qui sont totalement biaisés. Bref, rester maître de ce que l'on aime devient de plus en plus difficile, et s'ensuit un appauvrissement de la qualité générale de ce que l'on consomme.
 
 {% blogimg date | blogdate, "spotify.jpg", "Pour des raisons obscures de droits d'auteur ou contrat, Spotify ne permet plus de streamer certains morceaux (en gris dans la liste)." %}
 
@@ -68,7 +68,9 @@ C'est une base de données qui permet de comparer des signatures numériques et 
 
 4. **J'enregistre avec les fichiers de chaque CDs plusieurs choses :** 
 
-Un fichier `cover.jpg` qui contient la pochette de l'album en haute résolution, et optionnellement un fichier `.cue` dans le cas où je souhaite graver un CD correspondant bit pour bit à l'original, et un fichier `.log` qui contient des informations sur le rip.
+- Un fichier `cover.jpg` qui contient la pochette de l'album en haute résolution.
+- Optionnellement un fichier `.cue` dans le cas où je souhaite graver un CD correspondant bit pour bit à l'original.
+- Enfin, un fichier `.log` qui contient des informations sur le rip.
 
 {% blogimg date | blogdate, "freac.jpg", "Fre:ac en pleine action." %}
 
@@ -78,7 +80,7 @@ Pour récupérer des images de couverture en grand format, j'utilise [Cover Sear
 
 ### Discogs
 
-Dans les rares cas où les autres logiciels ne sont pas capables d'intégrer les tags de manière automatique, je vais fouiller dans [Discogs](https://www.discogs.com/) pour retrouver certaines information cruciales sur les tracklists ou genre d'un album qui peut être un peu particulier.
+Dans les rares cas où les autres logiciels ne sont pas capables d'intégrer les tags de manière automatique, je vais fouiller dans [Discogs](https://www.discogs.com/) pour retrouver certaines informations cruciales sur les tracklists ou genre d'un album qui peut être un peu particulier.
 
 ## La nomenclature de nommage
 
@@ -86,16 +88,16 @@ C'est certainement un point aussi important que le choix du format de stockage :
 
 À noter que même si c'est une chose importante, il vaut mieux passer du temps sur les tags des fichiers : ce sont eux qui vont servir de boussole au logiciel de gestion de la bibliothèque musicale. Techniquement, on pourrait avoir tous ses fichiers en vrac à la racine d'un répertoire, et si ces derniers sont bien taggés cela ne devrait pas poser de problème. Mais parfois, il peut être utile de parcourir sa bibliothèque en utilisant un navigateur de fichiers, et un système de nommage clair et consistant devient extrêmement pratique.
 
-J'ai donc choisi une nomenclature qui classe les albums d'abord par artiste (un artiste par répertoire, avec un dossier un peu spécial appelé `Various Artists` pour les compilations). Dans chacun de ces dossiers, j'utilise un sous-dossier par album, avec l'année de sortie en premier et entre crochets. Cela permet un classement naturel des albums par date de sortie. Enfin, dans chacun de ces dossiers d'albums, j'ai les fichiers musicaux en eux-même, selon un nommage très simple `XX - titre.flax`. À cette règle principale s'appliquent quelques petites règles supplémentaires :
+J'ai donc choisi une nomenclature qui classe les albums d'abord par artiste (un artiste par répertoire, avec un dossier un peu spécial appelé `Various Artists` pour les compilations). Dans chacun de ces dossiers, j'utilise un sous-dossier par album, avec l'année de sortie en premier et entre crochets. Cela permet un classement naturel des albums par date de sortie. Enfin, dans chacun de ces dossiers d'albums, j'ai les fichiers musicaux en eux-même, selon un nommage très simple `XX - titre.flac`. À cette règle principale s'appliquent quelques petites règles supplémentaires :
 
-- Si un album est une compilation, les fichiers sont nommés `XX - artiste - titre.flax`
-- Si un album s'étend sur plusieurs CDs, ils se retrouvent chacun dans un dossier dédié appelé `CD1`, `CD2`, etc...
+- Si un album est une compilation, les fichiers sont nommés `XX - artiste - titre.flac`
+- Si un album s'étend sur plusieurs CDs, ils se retrouvent chacun dans un dossier dédié appelé `CD1`, `CD2`, etc.
 - Les deux règles précédentes peuvent se combiner dans le cas d'une compilation qui s'étend sur plusieurs CDs.
 - Enfin, dans le cadre d'une compilation, je stocke le genre de la compilation avec le nom de l'album: `Various Artists/[2001] The Braindance Coincidence [Electronic]`
 
-Enfin, dans chacun des dossiers, je stocke en parallèle des fichiers musicaux trois fichiers : la couverture de l'album en grand format, un fichier `.cue` pour éventuellement graver une copie de l'album, et un fichier `.log` qui reprend les informations de compression.
+Dans chacun des dossiers, je stocke en parallèle des fichiers musicaux trois fichiers : la couverture de l'album en grand format, un fichier `.cue` pour éventuellement graver une copie de l'album, et un fichier `.log` qui reprend les informations de compression.
 
-Ainsi, dans le cas par exemple de l'album [The Geist of Alec Empire](https://www.discogs.com/release/87960-Alec-Empire-The-Geist-Of-Alec-Empire), qui est une compilation dispersée sur 3 CDs, la nommenclature des fichiers ressemble à ça :
+Ainsi, dans le cas par exemple de l'album [The Geist of Alec Empire](https://www.discogs.com/release/87960-Alec-Empire-The-Geist-Of-Alec-Empire), qui est une compilation dispersée sur 3 CDs, la nomenclature des fichiers ressemble à ça :
 
 ```plaintext
 Alec Empire/
@@ -170,7 +172,7 @@ La première phase a été de trier toute la collection de fichiers MP3 que j'av
 
 Ce plan d'action est simple, mais il m'aura fallu pas loin de 4 mois pour arriver à bout des 9 500 titres, éparpillé sur plus de 800 albums et pas loin de 500 artistes différents constituant ma bibliothèque musicale.
 
-J'ai pu ensuite redécouvrir le plaisir d'acheter des CDs dans des magasins de surplus et d'occasion, suivre les précieux conseils du responsable du rayon musique de ma médiathèque locale, et durant ces derniers mois j'ai finalement découvert plus de musique que durant les dernières années à consommer passivement via Spotify.
+J'ai pu ensuite redécouvrir le plaisir d'acheter des CDs dans des magasins de surplus et d'occasion, suivre les précieux conseils du responsable du rayon musique de ma médiathèque locale, et durant ces derniers mois, j'ai finalement découvert plus de musique que durant les dernières années à consommer passivement via Spotify.
 
 {% blogimg date | blogdate, "ratm.jpg", "Après 30 ans d'écoute, certains disques sont trop abimés pour être converti en FLAC, et j'ai dû en racheter plusieurs. On remarque aussi la différence de pressage sur l'imprimé à l'intérieur." %}
 
@@ -207,4 +209,4 @@ Mettre en place un tel système n'aura pas été simple, mais finalement le jeu 
 
 Évidemment, on pourrait considérer comme une contrainte le fait de ne plus pouvoir écouter n'importe quelle musique à n'importe quel moment. Mais cette frustration n'est que temporaire, le temps d'acquérir l'album. Elle est largement compensée par le plaisir du rapport physique au média et par celui de véritablement posséder sa collection.
 
-Cette démarche me pousse à être moins consommateur et plus impliqué dans ce que j'écoute. Au final, je dirais même que cette frustration est salutaire : elle me permet d'apprécier davantage certaines œuvres, de leur accorder plus d'attention et de leur donner une valeur qu'elles n'auraient peut-être jamais eue dans un catalogue de cent millions de titres. Et ce plaisir n'a pas de prix.
+Cette démarche me pousse à être moins passif et plus impliqué dans ce que j'écoute. Au final, je dirais même que cette frustration est salutaire : elle me permet d'apprécier davantage certaines œuvres, de leur accorder plus d'attention et de leur donner une valeur qu'elles n'auraient peut-être jamais eue dans un catalogue de cent millions de titres. Et ce plaisir n'a pas de prix.
