@@ -1,12 +1,11 @@
 ---
 title: "Comment j'ai repris la main sur ma collection de musique"
-date: 2026-06-06
-draft: true
+date: 2026-06-16
 cover:
   author: "Phil Hearing"
   link: "https://unsplash.com/@philhearing"
 ---
-Aussi loin que je me souvienne, la musique a toujours eu une place centrale dans ma vie. Au lycée, j'étais ce gamin avec un casque tout le temps vissé sur le crâne, un Discman dans la poche et des CDs plein le sac à dos. C'était l'époque de **Korn**, de **Deftones** ou encore **Ska-P**, mais aussi de **Bjork**, **Alec Empire** et **Prodigy**. Un peu plus tard, le hasard a voulu que je découvre les *sound trackers*, et j'ai pu produire ma propre musique. Ça a été un véritable pilier dans mon adolescence, et encore aujourd'hui la musique m'accompagne au quotidien et j'ai le privilège de pouvoir travailler en écoutant autant que je veux.
+Aussi loin que je me souvienne, la musique a toujours eu une place centrale dans ma vie. Au lycée, j'étais ce gamin avec un casque tout le temps vissé sur le crâne, un Discman dans la poche et des CDs plein le sac à dos. C'était l'époque de **Korn**, de **Deftones** ou encore **Ska-P**, mais aussi de **Bjork**, **Alec Empire** et **Prodigy**. Un peu plus tard, le hasard a voulu que je découvre les [*sound trackers*](https://fr.wikipedia.org/wiki/Tracker_(musique)), et j'ai pu produire ma propre musique. Ça a été un véritable pilier dans mon adolescence, et encore aujourd'hui la musique m'accompagne au quotidien et j'ai le privilège de pouvoir travailler en écoutant autant que je veux.
 
 Bien évidemment, au fil du temps et avec l'évolution des technologies, j'ai pu amasser une très grande quantité d'albums, de mixes, sous plein de formes différentes. Et bien évidemment, grâce à l'explosion du MP3 et des torrents, ma collection n'a fait que grandir au fil du temps. Malheureusement, la qualité du format n'est pas toujours au rendez-vous, et certains albums que j'affectionne tout particulièrement ont atterri parfois sur mon disque dur en provenant de sources un peu douteuses.
 
@@ -24,6 +23,8 @@ C'était aussi l'époque où pour écouter un album avant de l'acheter, il falla
 
 Et quand j'écris que cela a changé ma vie, je pèse mes mots. Ce jour-là, un univers créatif m'a ouvert ses portes. J'écoutais une musique qui me paraissait irréelle, et qui pourtant semblait me parler directement.
 
+{% blogimg date | blogdate, "ae.jpg", "[Autechre - Tri Repetae](https://en.wikipedia.org/wiki/Tri_Repetae), là d'où tout est parti." %}
+
 Comme je le disais plus haut, la coïncidence a voulu que quelques mois plus tard je découvrais les *sound trackers*, ces logiciels qui permettaient de mettre bout à bout des samples, et donnaient la main à qui le voulait de créer des morceaux. Et pendant plusieurs années, je me suis attelé à écouter et composer de la musique. C'était une époque formidable où j'ai découvert d'autres artistes que j'écoute toujours aujourd'hui : **Aphex Twin**, **Photek**, **Dntel**, **Telefon Tel Aviv**, **Clark**, **Funkstörung**, et tant d'autres...
 
 ## Les choses évoluent en pire
@@ -35,6 +36,8 @@ Et depuis quelques années, je consomme comme beaucoup la majorité de ma musiqu
 Seulement voilà, suivant le principe de [Merdification](https://fr.wikipedia.org/wiki/Merdification), la qualité de service de Spotify n'a cessé de se dégrader au fil des ans. Je passerai sur son UX désastreuse qui empire à chaque mise à jour, cela pourrait être le sujet d'un article dédié. Je ne m'étalerai pas non plus sur la qualité de streaming qui est soit-disant en deçà de la concurrence : Spotify permet une écoute en 320 kbps, et soyons honnêtes, rares sont ceux qui pourraient faire la différence entre ce bitrate et un support original, surtout si c'est pour écouter sa musique en voiture ou en faisant du sport.
 
 Ce qui me frustre au plus haut point, c'est de voir des morceaux soudainement disparaître au milieu d'albums que j'ai l'habitude d'écouter, ou encore de ne simplement plus avoir le droit de streamer certains albums, pour d'obscurs problèmes de droit d'auteur. Et étant un grand amateur de Rap, j'avoue ne pas être fan de devoir faire avec les versions édulcorées et censurées de mes morceaux favoris. Et puis tout n'est pas disponible. Certaines anciennes sorties, un peu obscures, ou des albums édités par des labels indépendants ne se trouvent tout simplement pas sur Spotify. Et puis il y a l'explosion de la musique générée par IA, les algorithmes de découverte qui sont totalement biaisés. Bref, rester maître de ce que l'on aime devient de plus en plus difficile, et s'ensuit un appauvrissement de la qualité générale de ce que l'on consomme.
+
+{% blogimg date | blogdate, "spotify.jpg", "Pour des raisons obscures de droits d'auteur ou contrat, Spotify ne permet plus de streamer certains morceaux (en gris dans la liste)." %}
 
 C'est pour toutes ces raisons que j'ai pris la décision de reprendre la main sur ma collection de musique.
 
@@ -164,6 +167,8 @@ La première phase a été de trier toute la collection de fichiers MP3 que j'av
 Ce plan d'action est simple, mais il m'aura fallu pas loin de 4 mois pour arriver à bout des 9 500 titres, éparpillé sur plus de 700 albums et pas loin de 400 artistes différents constituant ma bibliothèque musicale.
 
 J'ai pu ensuite redécouvrir le plaisir d'acheter des CDs dans des magasins de surplus et d'occasion, suivre les précieux conseils du responsable du rayon musique de ma médiathèque locale, et durant ces derniers mois j'ai finalement découvert plus de musique que durant les dernières années à consommer passivement via Spotify.
+
+{% blogimg date | blogdate, "ratm.jpg", "Après 30 ans d'écoute, certains disques sont trop abimés pour être converti en FLAC, et j'ai dû en racheter plusieurs. On remarque aussi la différence de pressage sur l'imprimé à l'intérieur." %}
 
 ## Backup et stockage longue durée
 

@@ -98,10 +98,13 @@ export default function(eleventyConfig) {
   // Blogimg shortcode for... well, blog images
   eleventyConfig.addShortcode('blogimg', (date, src, alt = 'Image') => {
     if (date && src) {
-      let str = `<div class="is-blog-img"><img src="/img/blog/${date}/${src}" alt="${alt}" width="720">`;
+      const renderedAlt = md.renderInline(alt);
+      const plainAlt = renderedAlt.replace(/<[^>]*>/g, '');
+
+      let str = `<div class="is-blog-img"><img src="/img/blog/${date}/${src}" alt="${plainAlt}" width="720">`;
 
       if (alt !== 'Image') {
-        str += `<p class="is-blog-img-title">${alt}</p>`;
+        str += `<p class="is-blog-img-title">${renderedAlt}</p>`;
       }
 
       str += `</div>`;
