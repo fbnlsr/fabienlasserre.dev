@@ -168,7 +168,7 @@ La première phase a été de trier toute la collection de fichiers MP3 que j'av
 - Si je ne possède pas le CD, je tagge correctement l'album.
 - Si je ne possède pas le CD et que la qualité du MP3 est inférieure à 320 kbps, je rachète l'album (soit en physique, soit *via* Bandcamp).
 
-Ce plan d'action est simple, mais il m'aura fallu pas loin de 4 mois pour arriver à bout des 9 500 titres, éparpillé sur plus de 700 albums et pas loin de 400 artistes différents constituant ma bibliothèque musicale.
+Ce plan d'action est simple, mais il m'aura fallu pas loin de 4 mois pour arriver à bout des 9 500 titres, éparpillé sur plus de 800 albums et pas loin de 500 artistes différents constituant ma bibliothèque musicale.
 
 J'ai pu ensuite redécouvrir le plaisir d'acheter des CDs dans des magasins de surplus et d'occasion, suivre les précieux conseils du responsable du rayon musique de ma médiathèque locale, et durant ces derniers mois j'ai finalement découvert plus de musique que durant les dernières années à consommer passivement via Spotify.
 
@@ -196,10 +196,15 @@ Dernière addition au système : [**Last.fm**](https://last.fm). C'est un site i
 
 ## Conclusion / La suite
 
-Et donc voilà, j'ai maintenant ma collection musicale sauvegardée, dans la meilleure qualité possible, et je peux y accéder depuis n'importe où. C'est une collection qui m'appartient intégralement et sur laquelle j'ai un contrôle total, sans être tributaire de droits d'auteurs ou d'aucune censure.
+
+Et donc voilà, j'ai maintenant une collection musicale de **près de 230 GB** de sauvegardée, dans la meilleure qualité possible, et je peux y accéder depuis n'importe où. C'est une collection qui m'appartient intégralement, qui me resemble au final, et sur laquelle j'ai un contrôle total, sans être tributaire de droits d'auteurs ou d'aucune censure.
+
+{% blogimg date | blogdate, "stats.jpg", "Au total : 457 artistes, 821 albums, 11 120 morceaux." %}
 
 Au fil de cette expérience, il m'aura fallu accepter que le système parfait n'existe pas : certains rips n'arrivent pas à être validés avec AccurateRip, d'autres n'existent simplement pas dans la base de données. En cherchant sur [les forums d'Hydrogen Audio](https://hydrogenaudio.org), je me suis rendu compte qu'effectivement, et pour une raison que je ne saurais expliquer, certains pressages sont impossibles à ripper de manière parfaite. Heureusement, il existe deux possibilités : faire confiance dans le logiciel de copie qui est capable au pire de comparer les signaux d'entrée et de sortie qui passent par le compresseur, et tout simplement croire en son oreille. Dans le pire des cas, si un album ne peut pas être une copie parfaite au bit près, mais qu'il sonne bien à l'écoute et qu'on ne distingue aucune erreur flagrante, est-ce si grave ?
 
 Mettre en place un tel système n'aura pas été simple, mais finalement le jeu en valait la chandelle. Aujourd'hui, j'apprécie encore plus ce que j'écoute, dans des conditions que je dicte et sans crainte de voir un morceau ou un album disparaître de ma bibliothèque sans raison. Je n'ai jamais autant « consommé » de musique que maintenant, et racheter des CDs physiques ou un album via Bandcamp est un réel plaisir.
 
-Évidemment, on pourrait dire que ne plus pouvoir écouter n'importe quelle musique à n'importe quel moment crée une adhérence qui peut apporter un peu de frustration. Mais cette « frustration » n'est que temporaire, le temps d'acquérir le CD, et elle est considérablement compensée par le plaisir du rapport physique au média, et à celui de véritablement posséder sa collection.
+Évidemment, on pourrait considérer comme une contrainte le fait de ne plus pouvoir écouter n'importe quelle musique à n'importe quel moment. Mais cette frustration n'est que temporaire, le temps d'acquérir l'album. Elle est largement compensée par le plaisir du rapport physique au média et par celui de véritablement posséder sa collection.
+
+Cette démarche me pousse à être moins consommateur et plus impliqué dans ce que j'écoute. Au final, je dirais même que cette frustration est salutaire : elle me permet d'apprécier davantage certaines œuvres, de leur accorder plus d'attention et de leur donner une valeur qu'elles n'auraient peut-être jamais eue dans un catalogue de cent millions de titres. Et ce plaisir n'a pas de prix.
